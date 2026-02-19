@@ -1,249 +1,773 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jérémy BOUVIER – Préparateur Mental</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jérémy BOUVIER – Préparateur Mental</title>
+  <meta name="description" content="Préparation mentale sport individuel et disciplines de précision. Structurer une exécution stable sous pression. Appel stratégique gratuit." />
 
-<meta name="description" content="Préparation mentale sport individuel et disciplines de précision. Structurer une exécution stable sous pression.">
+  <style>
+    :root{
+      --bg:#0b0d10;
+      --panel:#0f1217;
+      --card:#121723;
+      --card2:#0f1520;
+      --line:rgba(255,255,255,.10);
+      --text:#f3f6ff;
+      --muted:rgba(243,246,255,.70);
+      --muted2:rgba(243,246,255,.55);
+      --accent:#8fb3ff;
+      --accent2:#7ef0c1;
+      --shadow: 0 18px 50px rgba(0,0,0,.45);
+      --radius:18px;
+      --radius2:14px;
+      --max:1120px;
+    }
 
-<style>
-:root{
---bg:#0b0d10;
---panel:#121723;
---line:rgba(255,255,255,.08);
---text:#f3f6ff;
---muted:rgba(243,246,255,.65);
---accent:#8fb3ff;
---radius:18px;
---max:1100px;
-}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(1200px 700px at 15% 10%, rgba(143,179,255,.18), transparent 55%),
+        radial-gradient(900px 600px at 85% 20%, rgba(126,240,193,.12), transparent 55%),
+        radial-gradient(1000px 700px at 50% 110%, rgba(143,179,255,.10), transparent 60%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.55;
+      overflow-x:hidden;
+    }
 
-*{box-sizing:border-box}
-body{
-margin:0;
-font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial,sans-serif;
-background:radial-gradient(1200px 600px at 20% 0%,rgba(143,179,255,.15),transparent 60%),#0b0d10;
-color:var(--text);
-line-height:1.6;
-}
+    a{color:inherit}
+    .container{max-width:var(--max); margin:0 auto; padding:24px;}
 
-.container{max-width:var(--max);margin:auto;padding:24px}
-a{text-decoration:none;color:inherit}
+    header{
+      position:sticky; top:0; z-index:30;
+      background:rgba(11,13,16,.70);
+      backdrop-filter: blur(10px) saturate(150%);
+      border-bottom:1px solid var(--line);
+    }
 
-header{
-position:sticky;top:0;z-index:50;
-background:rgba(11,13,16,.85);
-backdrop-filter:blur(8px);
-border-bottom:1px solid var(--line);
-}
+    .nav{
+      display:flex; align-items:center; justify-content:space-between; gap:16px;
+    }
 
-.nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    /* Brand */
+    .brandWrap{display:flex; align-items:center; gap:12px; min-width: 270px;}
+    .logo{
+      width:46px; height:46px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      display:flex; align-items:center; justify-content:center;
+      overflow:hidden;
+      box-shadow: 0 10px 28px rgba(0,0,0,.35);
+    }
+    .logo img{width:100%;height:100%;object-fit:cover;display:block}
+    .brand{display:flex; flex-direction:column; line-height:1.1;}
+    .brand strong{font-size:14px; letter-spacing:.4px}
+    .brand span{font-size:12px; color:var(--muted)}
 
-.brandWrap{display:flex;align-items:center;gap:12px}
-.logo{
-width:48px;height:48px;
-border-radius:12px;
-overflow:hidden;
-border:1px solid var(--line);
-background:#111;
-}
-.logo img{width:100%;height:100%;object-fit:cover}
+    nav{
+      display:flex; gap:14px; flex-wrap:wrap;
+      font-size:13px; color:var(--muted);
+      justify-content:center;
+    }
+    nav a{
+      text-decoration:none;
+      padding:8px 10px;
+      border-radius:10px;
+      border:1px solid transparent;
+    }
+    nav a:hover{
+      background:rgba(255,255,255,.06);
+      border-color:rgba(255,255,255,.08);
+      color:var(--text);
+    }
 
-.brand strong{font-size:14px}
-.brand span{font-size:12px;color:var(--muted)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:11px 14px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      text-decoration:none;
+      font-weight:800;
+      font-size:13px;
+      gap:10px;
+      background:rgba(255,255,255,.04);
+      white-space:nowrap;
+      transition: transform .12s ease, background .12s ease, filter .12s ease;
+    }
+    .btn:hover{ background:rgba(255,255,255,.08); transform: translateY(-1px); }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(143,179,255,.95), rgba(126,240,193,.80));
+      color:#0b0d10;
+      border:0;
+      box-shadow: 0 16px 38px rgba(0,0,0,.35);
+    }
+    .btn.primary:hover{ filter:brightness(1.03); }
+    .btn.ghost{ background:transparent; }
 
-.btn{
-padding:10px 14px;
-border-radius:12px;
-border:1px solid var(--line);
-background:#141922;
-font-weight:600;
-font-size:13px;
-display:inline-flex;
-align-items:center;
-gap:8px;
-}
+    .grid{display:grid; gap:18px;}
+    .panel{
+      background:rgba(15,18,23,.74);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+    }
 
-.btn.primary{
-background:linear-gradient(135deg,#8fb3ff,#7ef0c1);
-color:#000;
-border:none;
-font-weight:700;
-}
+    /* HERO */
+    .hero{ padding:36px 0 10px; position:relative; }
+    .heroGrid{ grid-template-columns: 1.15fr .85fr; align-items:stretch; }
 
-.hero{padding:60px 0 30px}
-.hero h1{
-font-size:42px;
-line-height:1.1;
-margin-bottom:14px;
-}
+    /* subtle animated glow layer */
+    .heroGlow{
+      position:absolute; inset:-120px -120px auto -120px;
+      height:520px;
+      pointer-events:none;
+      background:
+        radial-gradient(420px 260px at 20% 45%, rgba(143,179,255,.18), transparent 65%),
+        radial-gradient(420px 260px at 70% 40%, rgba(126,240,193,.12), transparent 65%);
+      filter: blur(2px);
+      animation: glowShift 7s ease-in-out infinite;
+      opacity:.85;
+    }
+    @keyframes glowShift{
+      0%,100%{ transform: translate3d(0,0,0) }
+      50%{ transform: translate3d(18px,-10px,0) }
+    }
 
-.lead{color:var(--muted);font-size:16px;margin-bottom:20px}
-.heroActions{display:flex;gap:12px;flex-wrap:wrap}
+    .heroCopy{padding:26px; position:relative; overflow:hidden;}
+    .kicker{
+      display:inline-flex; gap:10px; flex-wrap:wrap;
+      font-size:12px; color:var(--muted);
+      margin-bottom:10px;
+    }
+    .pill{
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:6px 10px;
+      background:rgba(255,255,255,.03);
+    }
 
-section{padding:40px 0}
+    h1{
+      margin:6px 0 10px;
+      font-size:44px;
+      line-height:1.03;
+      letter-spacing:-.7px;
+    }
+    .hook{
+      margin:10px 0 12px;
+      font-size:18px;
+      color:rgba(243,246,255,.90);
+    }
+    .lead{font-size:16px; color:var(--muted); margin:0 0 14px;}
+    .promise{
+      font-size:16px;
+      margin:0 0 10px;
+      color:rgba(243,246,255,.88);
+    }
 
-.card{
-background:var(--panel);
-padding:20px;
-border-radius:var(--radius);
-border:1px solid var(--line);
-margin-bottom:20px;
-}
+    .heroActions{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px;}
+    .miniContacts{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;}
 
-h2{margin-bottom:10px}
-.sub{color:var(--muted);margin-bottom:20px}
+    .stats{
+      display:grid; grid-template-columns: repeat(3, 1fr);
+      gap:10px; padding:14px; margin-top:18px;
+      border-top:1px solid var(--line);
+    }
+    .stat{
+      padding:10px 12px; border:1px solid var(--line);
+      border-radius:14px; background:rgba(255,255,255,.03);
+    }
+    .stat b{display:block; font-size:14px;}
+    .stat span{display:block; font-size:12px; color:var(--muted); margin-top:2px;}
 
-.faq details{
-background:var(--panel);
-padding:15px;
-border-radius:12px;
-border:1px solid var(--line);
-margin-bottom:10px;
-}
+    .signature{
+      margin-top:14px;
+      font-weight:900;
+      letter-spacing:.35px;
+      color:rgba(243,246,255,.92);
+    }
+    .signature small{
+      display:block;
+      font-weight:700;
+      color:var(--muted);
+      margin-top:6px;
+      letter-spacing:0
+    }
 
-footer{
-border-top:1px solid var(--line);
-padding:30px 0;
-color:var(--muted);
-font-size:13px;
-}
+    /* Entrance animation */
+    .revealUp{opacity:0; transform: translateY(14px); animation: reveal .75s ease forwards;}
+    .d1{animation-delay:.05s}
+    .d2{animation-delay:.12s}
+    .d3{animation-delay:.18s}
+    .d4{animation-delay:.26s}
+    @keyframes reveal{
+      to{opacity:1; transform: translateY(0)}
+    }
 
-@media(max-width:900px){
-.hero h1{font-size:32px}
-}
-</style>
+    /* HERO visual */
+    .heroVisual{padding:18px; display:flex; flex-direction:column; gap:12px; justify-content:space-between;}
+    .visualBox{
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:16px;
+      min-height:240px;
+      background:
+        radial-gradient(600px 320px at 30% 25%, rgba(143,179,255,.18), transparent 60%),
+        radial-gradient(520px 320px at 70% 65%, rgba(126,240,193,.12), transparent 60%),
+        rgba(255,255,255,.02);
+      position:relative;
+      overflow:hidden;
+    }
+    .visualBox:after{
+      content:"";
+      position:absolute; inset:-60px -60px auto auto;
+      width:260px; height:260px;
+      background: radial-gradient(circle at 30% 30%, rgba(143,179,255,.25), transparent 60%);
+      transform: rotate(18deg);
+      animation: floaty 5.5s ease-in-out infinite;
+      opacity:.9;
+    }
+    @keyframes floaty{
+      0%,100%{ transform: translate3d(0,0,0) rotate(18deg) }
+      50%{ transform: translate3d(-12px,10px,0) rotate(18deg) }
+    }
+    .visualInner{
+      position:absolute; inset:0;
+      display:flex; align-items:flex-end; justify-content:flex-start;
+      padding:18px;
+      color:rgba(243,246,255,.82);
+    }
+    .visualTag{
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(0,0,0,.18);
+      border-radius:14px;
+      padding:12px 12px;
+      width:100%;
+    }
+    .note{
+      font-size:12px; color:var(--muted);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:12px;
+      background:rgba(255,255,255,.03);
+    }
+
+    /* Sections */
+    section{padding:18px 0;}
+    h2{margin:0 0 10px; font-size:24px; letter-spacing:-.2px;}
+    .sub{margin:0 0 16px; color:var(--muted);}
+
+    /* Selection effect band */
+    .selectBand{
+      margin-top:18px;
+      border:1px solid rgba(143,179,255,.25);
+      background:linear-gradient(180deg, rgba(18,23,35,.86), rgba(18,23,35,.60));
+      border-radius:18px;
+      padding:16px;
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .selectBand b{color:rgba(243,246,255,.92)}
+    .selectBand .small{color:var(--muted2); font-size:13px; max-width:760px;}
+    .selectBand .actions{display:flex; gap:10px; flex-wrap:wrap;}
+
+    /* Cards / Offers */
+    .cards{grid-template-columns: repeat(3, 1fr);}
+    .card{
+      padding:18px;
+      border-radius:var(--radius);
+      background:rgba(18,23,35,.78);
+      border:1px solid var(--line);
+      box-shadow: 0 14px 40px rgba(0,0,0,.28);
+      position:relative;
+      overflow:hidden;
+    }
+    .card .top{
+      display:flex; align-items:flex-start; justify-content:space-between; gap:12px;
+      margin-bottom:8px;
+    }
+    .badge{
+      font-size:11px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      white-space:nowrap;
+    }
+    .price{
+      font-size:20px; font-weight:950;
+      letter-spacing:-.2px;
+      margin:6px 0 10px;
+    }
+    ul{margin:10px 0 0 18px; color:rgba(243,246,255,.82)}
+    li{margin:6px 0;}
+    .card .btn{margin-top:14px; width:100%;}
+    .card.featured{
+      border-color: rgba(143,179,255,.45);
+      background: linear-gradient(180deg, rgba(18,23,35,.90), rgba(18,23,35,.60));
+    }
+    .card.featured:before{
+      content:"";
+      position:absolute; inset:-70px -90px auto auto;
+      width:260px; height:260px;
+      background: radial-gradient(circle at 30% 30%, rgba(143,179,255,.35), transparent 60%);
+      transform: rotate(18deg);
+      pointer-events:none;
+    }
+
+    /* Testimonials */
+    .tGrid{grid-template-columns: repeat(5, 1fr);}
+    .tCard{
+      padding:16px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      min-height: 170px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .tQuote{color:rgba(243,246,255,.82); font-size:13px; line-height:1.55;}
+    .tMeta{
+      margin-top:auto;
+      display:flex;
+      flex-direction:column;
+      gap:3px;
+      color:var(--muted);
+      font-size:12px;
+    }
+    .stars{letter-spacing:1px; color:rgba(143,179,255,.9); font-size:12px;}
+
+    /* Two columns */
+    .twoCol{grid-template-columns: 1fr 1fr;}
+    .divider{height:1px; background:var(--line); margin:18px 0;}
+
+    /* FAQ */
+    details{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      border-radius:14px;
+      padding:14px 14px;
+    }
+    details + details{margin-top:10px;}
+    summary{
+      cursor:pointer;
+      list-style:none;
+      font-weight:900;
+      letter-spacing:.2px;
+      outline:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    summary::-webkit-details-marker{display:none}
+    .faqA{
+      color:var(--muted);
+      margin-top:10px;
+      padding-top:10px;
+      border-top:1px solid var(--line);
+    }
+    .chev{
+      width:28px; height:28px;
+      border-radius:10px;
+      border:1px solid var(--line);
+      display:flex; align-items:center; justify-content:center;
+      background:rgba(255,255,255,.03);
+      flex:0 0 auto;
+      transition: transform .18s ease;
+    }
+    details[open] .chev{transform: rotate(180deg);}
+
+    /* Footer */
+    footer{
+      padding:26px 0 40px;
+      border-top:1px solid var(--line);
+      margin-top:10px;
+      background:rgba(0,0,0,.08);
+    }
+    .foot{
+      display:flex; align-items:flex-start; justify-content:space-between; gap:18px; flex-wrap:wrap;
+      color:var(--muted); font-size:13px;
+    }
+
+    /* Mobile */
+    @media (max-width: 1080px){
+      .tGrid{grid-template-columns: 1fr 1fr;}
+    }
+    @media (max-width: 980px){
+      .heroGrid{grid-template-columns: 1fr;}
+      h1{font-size:34px;}
+      .cards{grid-template-columns:1fr;}
+      .twoCol{grid-template-columns:1fr;}
+      .stats{grid-template-columns:1fr;}
+      header .btn.primary{display:none;}
+      nav{display:none;}
+      .tGrid{grid-template-columns: 1fr;}
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-<div class="container nav">
+  <div class="container nav">
 
-<div class="brandWrap">
-<div class="logo">
-<img src="logo.png" alt="Logo">
-</div>
-<div class="brand">
-<strong>Jérémy BOUVIER – Préparateur Mental</strong>
-<span>Stratège en Performance</span>
-</div>
-</div>
+    <div class="brandWrap">
+      <div class="logo" title="Logo">
+        <!-- IMPORTANT : mets ton fichier logo à la racine du repo et nomme-le logo.png -->
+        <img src="logo.png" alt="Logo HyBou" />
+      </div>
+      <div class="brand">
+        <strong>Jérémy BOUVIER – Préparateur Mental</strong>
+        <span>Sport individuel & disciplines de précision</span>
+      </div>
+    </div>
 
-<a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes" target="_blank">Appel Stratégique GRATUIT</a>
+    <nav aria-label="Navigation">
+      <a href="#offres">Programmes</a>
+      <a href="#selection">Sélection</a>
+      <a href="#temoignages">Témoignages</a>
+      <a href="#meeting">Présence compétition</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-</div>
+    <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes" target="_blank" rel="noopener">Appel Stratégique GRATUIT</a>
+  </div>
 </header>
 
-<main class="container">
+<main>
 
-<section class="hero">
-<h1>Quand l’enjeu monte, l’exécution doit rester stable.</h1>
-<p class="lead">
-Sport individuel & disciplines de précision.<br>
-Je structure un mental stable, précis et décisif sous pression.
-</p>
+  <!-- HERO -->
+  <section class="container hero" id="top">
+    <div class="heroGlow"></div>
 
-<div class="heroActions">
-<a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes" target="_blank">
-📅 Réserver l’Appel Stratégique GRATUIT
-</a>
-<a class="btn" href="tel:0661962653">📞 06 61 96 26 53</a>
-<a class="btn" href="mailto:hybouvier@gmail.com">✉️ hybouvier@gmail.com</a>
-</div>
-</section>
+    <div class="grid heroGrid">
 
-<section>
-<h2>Programmes</h2>
-<p class="sub">3 formats structurés selon ton objectif.</p>
+      <div class="panel heroCopy">
+        <div class="kicker revealUp d1">
+          <span class="pill">Compétition</span>
+          <span class="pill">Précision</span>
+          <span class="pill">Pression</span>
+        </div>
 
-<div class="card">
-<h3>Séance Individuelle – 140€</h3>
-<ul>
-<li>Analyse ciblée</li>
-<li>Blocage / pression / focus</li>
-<li>Ajustement stratégique immédiat</li>
-</ul>
-</div>
+        <h1 class="revealUp d2">Quand l’enjeu monte, l’exécution doit rester stable.</h1>
 
-<div class="card">
-<h3>Programme Fondations – 690€</h3>
-<ul>
-<li>5 séances</li>
-<li>Routines mentales</li>
-<li>Stabilité & confiance</li>
-<li>Plan structuré personnalisé</li>
-</ul>
-</div>
+        <p class="hook revealUp d3">
+          Tu peux être excellent… et perdre de la précision sur un détail mental :
+          <b>rythme</b>, <b>focus</b>, <b>après-erreur</b>, <b>pression</b>.
+        </p>
 
-<div class="card">
-<h3>Programme Performance Saison – 1200€</h3>
-<ul>
-<li>8 séances</li>
-<li>3 briefings + 3 débriefings</li>
-<li>Plan mental compétition</li>
-<li>Audio d’activation personnalisé</li>
-</ul>
-</div>
+        <p class="lead revealUp d3">
+          J’accompagne les sportifs en sport individuel & disciplines de précision à structurer un mental
+          <b>stable</b>, <b>précis</b> et <b>décisif</b> dans les moments qui comptent.
+        </p>
 
-</section>
+        <p class="promise revealUp d4"><b>La performance se structure.</b></p>
 
-<section>
-<h2>Présence Stratégique en Compétition</h2>
-<p class="sub">Gestion mentale en temps réel – contexte réel.</p>
+        <div class="heroActions revealUp d4">
+          <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes" target="_blank" rel="noopener">📅 Appel Stratégique GRATUIT (30 min)</a>
+          <a class="btn" href="#offres">Voir les programmes</a>
+          <a class="btn ghost" href="#selection">Candidater</a>
+        </div>
 
-<div class="card">
-<ul>
-<li>700€ / 1 jour + VHR</li>
-<li>1200€ / 2 jours + VHR</li>
-<li>1650€ / 3 jours + VHR</li>
-<li>1950€ / 4 jours + VHR</li>
-</ul>
-</div>
-</section>
+        <div class="miniContacts revealUp d4">
+          <a class="btn" href="tel:0661962653">📞 06 61 96 26 53</a>
+          <a class="btn" href="mailto:hybouvier@gmail.com">✉️ hybouvier@gmail.com</a>
+        </div>
 
-<section class="faq">
-<h2>FAQ</h2>
+        <div class="stats">
+          <div class="stat"><b>Stabilité</b><span>Garder le niveau sous pression</span></div>
+          <div class="stat"><b>Précision</b><span>Exécuter sans bruit mental</span></div>
+          <div class="stat"><b>Régularité</b><span>Répéter le bon geste, au bon moment</span></div>
+        </div>
 
-<details>
-<summary>L’appel est-il vraiment gratuit ?</summary>
-<p class="sub">Oui. 30 minutes pour analyser ta situation et voir si l’accompagnement est pertinent.</p>
-</details>
+        <div class="signature">
+          Stratège en Performance
+          <small>Approche structurée • Contexte réel • Routines & protocoles</small>
+        </div>
+      </div>
 
-<details>
-<summary>Est-ce adapté au sport individuel ?</summary>
-<p class="sub">Oui. L’approche est pensée pour les disciplines de précision et les contextes à forte pression.</p>
-</details>
+      <div class="panel heroVisual">
+        <div class="visualBox">
+          <div class="visualInner">
+            <div class="visualTag">
+              <b>Approche “exécution”</b><br/>
+              <span style="color:rgba(243,246,255,.70); font-size:13px;">
+                Plan mental clair • routines • gestion de l’erreur • pression • focus.
+              </span>
+            </div>
+          </div>
+        </div>
 
-<details>
-<summary>Présentiel ou visio ?</summary>
-<p class="sub">Les deux fonctionnent. On choisit selon ton contexte et ton calendrier.</p>
-</details>
+        <div class="note">
+          <b>Pour qui ?</b><br/>
+          Athlètes engagés (sport individuel / précision) qui veulent une exécution stable le jour J — pas “un bon feeling”.
+        </div>
+      </div>
 
-</section>
+    </div>
+  </section>
 
-<section>
-<h2>Contact</h2>
+  <!-- SELECTION -->
+  <section class="container" id="selection">
+    <div class="divider"></div>
+    <h2>Effet sélection</h2>
+    <p class="sub">Je ne prends pas tout le monde : je sélectionne les profils qui veulent structurer leur performance.</p>
 
-<div class="heroActions">
-<a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes" target="_blank">
-📅 Réserver sur le calendrier
-</a>
-<a class="btn" href="tel:0661962653">📞 06 61 96 26 53</a>
-<a class="btn" href="mailto:hybouvier@gmail.com">✉️ hybouvier@gmail.com</a>
-</div>
+    <div class="selectBand">
+      <div>
+        <b>⚠️ Accompagnement sur candidature</b>
+        <div class="small">
+          Je travaille avec des athlètes qui ont une saison importante / un objectif qualification / podium,
+          et qui acceptent un cadre : application, routines, feedback, progression.
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes" target="_blank" rel="noopener">📅 Candidater (appel gratuit)</a>
+        <a class="btn" href="#faq">Voir les critères</a>
+      </div>
+    </div>
+  </section>
 
-</section>
+  <!-- OFFRES -->
+  <section class="container" id="offres">
+    <div class="divider"></div>
+    <h2>Programmes</h2>
+    <p class="sub">3 formats. Une logique : structurer le mental comme l’entraînement.</p>
+
+    <div class="grid cards">
+      <article class="card">
+        <div class="top">
+          <div>
+            <h3>Séance Individuelle</h3>
+            <div class="price">140€</div>
+          </div>
+          <span class="badge">Ciblée</span>
+        </div>
+        <ul>
+          <li>Analyse rapide + ajustement stratégique</li>
+          <li>Pression / blocage / focus</li>
+          <li>Mini plan d’action</li>
+        </ul>
+        <a class="btn" href="https://app.lemcal.com/@pm-jb/30-minutes" target="_blank" rel="noopener">Appel Stratégique GRATUIT</a>
+      </article>
+
+      <article class="card">
+        <div class="top">
+          <div>
+            <h3>Programme Fondations Mentales</h3>
+            <div class="price">690€</div>
+          </div>
+          <span class="badge">5 séances</span>
+        </div>
+        <ul>
+          <li>Stabilité mentale & routines</li>
+          <li>Confiance / blocages / pression</li>
+          <li>Plan d’action personnalisé</li>
+        </ul>
+        <a class="btn" href="https://app.lemcal.com/@pm-jb/30-minutes" target="_blank" rel="noopener">Appel Stratégique GRATUIT</a>
+      </article>
+
+      <article class="card featured">
+        <div class="top">
+          <div>
+            <h3>Programme Performance Saison</h3>
+            <div class="price">1200€</div>
+          </div>
+          <span class="badge">Recommandé</span>
+        </div>
+        <ul>
+          <li>8 séances individuelles</li>
+          <li>3 briefings + 3 débriefings (visio / vocal / écrit)</li>
+          <li>Plan mental compétition personnalisé</li>
+          <li>Audio d’activation</li>
+          <li>Évaluation avant / après</li>
+        </ul>
+        <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes" target="_blank" rel="noopener">Candidater (appel gratuit)</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="container" id="temoignages">
+    <div class="divider"></div>
+    <h2>Témoignages (exemples)</h2>
+    <p class="sub">Exemples de retours typiques observés en sport individuel / précision.</p>
+
+    <div class="grid tGrid">
+      <div class="tCard">
+        <div class="stars">★★★★★</div>
+        <div class="tQuote">« J’ai arrêté de “subir” la compétition. On a structuré ma routine et mon après-erreur : mon niveau est devenu stable quand l’enjeu monte. »</div>
+        <div class="tMeta">
+          <b>Compétiteur – discipline précision</b>
+          <span>Programme Performance Saison</span>
+        </div>
+      </div>
+
+      <div class="tCard">
+        <div class="stars">★★★★★</div>
+        <div class="tQuote">« Je faisais de très bonnes séances… et je m’écroulais au moment clé. Là, j’ai un plan mental clair et je sais quoi faire quand ça dérape. »</div>
+        <div class="tMeta">
+          <b>Athlète – sport individuel</b>
+          <span>Fondations Mentales</span>
+        </div>
+      </div>
+
+      <div class="tCard">
+        <div class="stars">★★★★★</div>
+        <div class="tQuote">« Le vrai changement : l’exécution. Moins de bruit mental, une activation réglée, et une précision qui ne tombe plus quand je doute. »</div>
+        <div class="tMeta">
+          <b>Compétiteur – objectif qualification</b>
+          <span>Performance Saison</span>
+        </div>
+      </div>
+
+      <div class="tCard">
+        <div class="stars">★★★★★</div>
+        <div class="tQuote">« Jérémy ne motive pas : il structure. C’est carré, mesurable, applicable. On a monté une routine simple et je la répète comme un entraînement. »</div>
+        <div class="tMeta">
+          <b>Athlète – discipline technique</b>
+          <span>Séances individuelles</span>
+        </div>
+      </div>
+
+      <div class="tCard">
+        <div class="stars">★★★★★</div>
+        <div class="tQuote">« Avec la présence sur meeting, j’ai gagné en stabilité. Briefing, recalibrage, débrief : j’avance plus vite entre chaque compétition. »</div>
+        <div class="tMeta">
+          <b>Compétiteur – saison importante</b>
+          <span>Présence compétition</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEETING -->
+  <section class="container" id="meeting">
+    <div class="divider"></div>
+    <h2>Présence Stratégique Compétition</h2>
+    <p class="sub">Présence sur place : briefing, recalibrage, gestion de l’erreur, débrief immédiat. Contexte réel.</p>
+
+    <div class="grid twoCol">
+      <div class="card">
+        <h3>Ce que je fais sur place</h3>
+        <ul>
+          <li>Briefing mental pré-épreuve</li>
+          <li>Ajustement activation</li>
+          <li>Gestion pression en temps réel</li>
+          <li>Recalibrage entre séries / manches</li>
+          <li>Débriefing immédiat</li>
+          <li>Rapport stratégique post compétition</li>
+        </ul>
+        <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes" target="_blank" rel="noopener">Demander une disponibilité</a>
+      </div>
+
+      <div class="card">
+        <h3>Tarification</h3>
+        <ul>
+          <li><b>700€</b> / 1 jour + frais réels VHR</li>
+          <li><b>1200€</b> / 2 jours + VHR</li>
+          <li><b>1650€</b> / 3 jours + VHR</li>
+          <li><b>1950€</b> / 4 jours + VHR</li>
+        </ul>
+        <p class="sub" style="margin-top:12px;">
+          VHR : véhicule • hébergement • restauration (frais réels).<br/>
+          Cas particulier : <b>tarif sur demande</b>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="container" id="faq">
+    <div class="divider"></div>
+    <h2>FAQ</h2>
+    <p class="sub">Réponses rapides aux questions les plus fréquentes.</p>
+
+    <details>
+      <summary>Est-ce que l’appel stratégique est vraiment gratuit ? <span class="chev">⌄</span></summary>
+      <div class="faqA">
+        Oui. 30 minutes pour analyser ta situation, ton objectif et déterminer si un accompagnement est pertinent.
+        Si ce n’est pas le bon moment, je te le dis clairement.
+      </div>
+    </details>
+
+    <details>
+      <summary>Quels profils tu sélectionnes ? <span class="chev">⌄</span></summary>
+      <div class="faqA">
+        Profils engagés, saison importante, objectif qualification/podium, et surtout : capacité à appliquer un cadre.
+        Je ne vends pas de motivation : je structure l’exécution.
+      </div>
+    </details>
+
+    <details>
+      <summary>Pourquoi “candidater” ? <span class="chev">⌄</span></summary>
+      <div class="faqA">
+        Parce qu’on travaille sur l’exécution en contexte réel : ça demande de l’engagement.
+        L’appel sert à vérifier l’adéquation et à poser un plan clair.
+      </div>
+    </details>
+
+    <details>
+      <summary>Présentiel ou visio : qu’est-ce qui marche le mieux ? <span class="chev">⌄</span></summary>
+      <div class="faqA">
+        Les deux fonctionnent. On choisit selon ton contexte. L’important, c’est la structure et l’application
+        (entraînement / compétition).
+      </div>
+    </details>
+
+    <details>
+      <summary>Les briefings / débriefings : c’est comment ? <span class="chev">⌄</span></summary>
+      <div class="faqA">
+        Tu choisis le format : visio, vocal ou écrit structuré. L’objectif : arriver avec un plan clair avant,
+        et ajuster immédiatement après.
+      </div>
+    </details>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="container" id="contact">
+    <div class="divider"></div>
+    <div class="panel" style="padding:22px;">
+      <h2>Appel Stratégique GRATUIT</h2>
+      <p class="sub">30 minutes • sans engagement • analyse rapide • décision stratégique ensuite.</p>
+
+      <div class="heroActions">
+        <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes" target="_blank" rel="noopener">📅 Réserver sur le calendrier</a>
+        <a class="btn" href="tel:0661962653">📞 06 61 96 26 53</a>
+        <a class="btn" href="mailto:hybouvier@gmail.com">✉️ hybouvier@gmail.com</a>
+        <a class="btn ghost" href="#top">Revenir en haut</a>
+      </div>
+
+      <p class="sub" style="margin-top:14px;">
+        <b>Jérémy BOUVIER – Préparateur Mental</b><br/>
+        <span style="color:rgba(243,246,255,.70)">Stratège en Performance • La performance se structure.</span>
+      </p>
+    </div>
+  </section>
 
 </main>
 
 <footer>
-<div class="container">
-<b>Jérémy BOUVIER – Préparateur Mental</b><br>
-Stratège en Performance<br>
-📞 06 61 96 26 53 • ✉️ hybouvier@gmail.com
-</div>
+  <div class="container foot">
+    <div>
+      <b style="color:rgba(243,246,255,.88)">Jérémy BOUVIER – Préparateur Mental</b><br/>
+      <span>Stratège en Performance • La performance se structure.</span><br/>
+      <span>📞 06 61 96 26 53 • ✉️ hybouvier@gmail.com</span>
+    </div>
+    <div>
+      <span>© <script>document.write(new Date().getFullYear())</script> • Tous droits réservés</span>
+    </div>
+  </div>
 </footer>
 
 </body>
