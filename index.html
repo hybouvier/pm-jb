@@ -11,7 +11,6 @@
       --bg:#0b0d10;
       --panel:#0f1217;
       --card:#121723;
-      --card2:#0f1520;
       --line:rgba(255,255,255,.10);
       --text:#f3f6ff;
       --muted:rgba(243,246,255,.70);
@@ -20,7 +19,6 @@
       --accent2:#7ef0c1;
       --shadow: 0 18px 50px rgba(0,0,0,.45);
       --radius:18px;
-      --radius2:14px;
       --max:1120px;
     }
 
@@ -119,9 +117,6 @@
 
     /* HERO */
     .hero{ padding:36px 0 10px; position:relative; }
-    .heroGrid{ grid-template-columns: 1.15fr .85fr; align-items:stretch; }
-
-    /* subtle animated glow layer */
     .heroGlow{
       position:absolute; inset:-120px -120px auto -120px;
       height:520px;
@@ -138,7 +133,15 @@
       50%{ transform: translate3d(18px,-10px,0) }
     }
 
-    .heroCopy{padding:26px; position:relative; overflow:hidden;}
+    /* Hero en 1 colonne centré */
+    .heroGrid{
+      grid-template-columns: 1fr;
+      max-width: 860px;
+      margin: 0 auto;
+      align-items:stretch;
+    }
+
+    .heroCopy{padding:36px; position:relative; overflow:hidden;}
     .kicker{
       display:inline-flex; gap:10px; flex-wrap:wrap;
       font-size:12px; color:var(--muted);
@@ -153,9 +156,9 @@
 
     h1{
       margin:6px 0 10px;
-      font-size:44px;
+      font-size:48px;
       line-height:1.03;
-      letter-spacing:-.7px;
+      letter-spacing:-.8px;
     }
     .hook{
       margin:10px 0 12px;
@@ -208,57 +211,11 @@
       to{opacity:1; transform: translateY(0)}
     }
 
-    /* HERO visual */
-    .heroVisual{padding:18px; display:flex; flex-direction:column; gap:12px; justify-content:space-between;}
-    .visualBox{
-      border:1px solid rgba(255,255,255,.10);
-      border-radius:16px;
-      min-height:240px;
-      background:
-        radial-gradient(600px 320px at 30% 25%, rgba(143,179,255,.18), transparent 60%),
-        radial-gradient(520px 320px at 70% 65%, rgba(126,240,193,.12), transparent 60%),
-        rgba(255,255,255,.02);
-      position:relative;
-      overflow:hidden;
-    }
-    .visualBox:after{
-      content:"";
-      position:absolute; inset:-60px -60px auto auto;
-      width:260px; height:260px;
-      background: radial-gradient(circle at 30% 30%, rgba(143,179,255,.25), transparent 60%);
-      transform: rotate(18deg);
-      animation: floaty 5.5s ease-in-out infinite;
-      opacity:.9;
-    }
-    @keyframes floaty{
-      0%,100%{ transform: translate3d(0,0,0) rotate(18deg) }
-      50%{ transform: translate3d(-12px,10px,0) rotate(18deg) }
-    }
-    .visualInner{
-      position:absolute; inset:0;
-      display:flex; align-items:flex-end; justify-content:flex-start;
-      padding:18px;
-      color:rgba(243,246,255,.82);
-    }
-    .visualTag{
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(0,0,0,.18);
-      border-radius:14px;
-      padding:12px 12px;
-      width:100%;
-    }
-    .note{
-      font-size:12px; color:var(--muted);
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:12px;
-      background:rgba(255,255,255,.03);
-    }
-
     /* Sections */
     section{padding:18px 0;}
     h2{margin:0 0 10px; font-size:24px; letter-spacing:-.2px;}
     .sub{margin:0 0 16px; color:var(--muted);}
+    .divider{height:1px; background:var(--line); margin:18px 0;}
 
     /* Selection effect band */
     .selectBand{
@@ -347,7 +304,6 @@
 
     /* Two columns */
     .twoCol{grid-template-columns: 1fr 1fr;}
-    .divider{height:1px; background:var(--line); margin:18px 0;}
 
     /* FAQ */
     details{
@@ -398,12 +354,11 @@
       color:var(--muted); font-size:13px;
     }
 
-    /* Mobile */
+    /* Responsive */
     @media (max-width: 1080px){
       .tGrid{grid-template-columns: 1fr 1fr;}
     }
     @media (max-width: 980px){
-      .heroGrid{grid-template-columns: 1fr;}
       h1{font-size:34px;}
       .cards{grid-template-columns:1fr;}
       .twoCol{grid-template-columns:1fr;}
@@ -411,6 +366,7 @@
       header .btn.primary{display:none;}
       nav{display:none;}
       .tGrid{grid-template-columns: 1fr;}
+      .heroCopy{padding:26px;}
     }
   </style>
 </head>
@@ -422,7 +378,6 @@
 
     <div class="brandWrap">
       <div class="logo" title="Logo">
-        <!-- IMPORTANT : mets ton fichier logo à la racine du repo et nomme-le logo.png -->
         <img src="logo.png" alt="Logo HyBou" />
       </div>
       <div class="brand">
@@ -446,12 +401,11 @@
 
 <main>
 
-  <!-- HERO -->
+  <!-- HERO (1 colonne) -->
   <section class="container hero" id="top">
     <div class="heroGlow"></div>
 
     <div class="grid heroGrid">
-
       <div class="panel heroCopy">
         <div class="kicker revealUp d1">
           <span class="pill">Compétition</span>
@@ -495,32 +449,13 @@
           <small>Approche structurée • Contexte réel • Routines & protocoles</small>
         </div>
       </div>
-
-      <div class="panel heroVisual">
-        <div class="visualBox">
-          <div class="visualInner">
-            <div class="visualTag">
-              <b>Approche “exécution”</b><br/>
-              <span style="color:rgba(243,246,255,.70); font-size:13px;">
-                Plan mental clair • routines • gestion de l’erreur • pression • focus.
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div class="note">
-          <b>Pour qui ?</b><br/>
-          Athlètes engagés (sport individuel / précision) qui veulent une exécution stable le jour J — pas “un bon feeling”.
-        </div>
-      </div>
-
     </div>
   </section>
 
   <!-- SELECTION -->
   <section class="container" id="selection">
     <div class="divider"></div>
-    <h2>Sélection</h2>
+    <h2>Effet sélection</h2>
     <p class="sub">Je ne prends pas tout le monde : je sélectionne les profils qui veulent structurer leur performance.</p>
 
     <div class="selectBand">
@@ -606,7 +541,7 @@
     <div class="grid tGrid">
       <div class="tCard">
         <div class="stars">★★★★★</div>
-        <div class="tQuote">« J’ai arrêté de “subir” la compétition. On a structuré ma routine et mon après-erreur : mon niveau est devenu stable quand l’enjeu monte. »</div>
+        <div class="tQuote">« J’ai arrêté de “subir” la compétition. Routine + après-erreur : mon niveau est devenu stable quand l’enjeu monte. »</div>
         <div class="tMeta">
           <b>Compétiteur – discipline précision</b>
           <span>Programme Performance Saison</span>
@@ -615,7 +550,7 @@
 
       <div class="tCard">
         <div class="stars">★★★★★</div>
-        <div class="tQuote">« Je faisais de très bonnes séances… et je m’écroulais au moment clé. Là, j’ai un plan mental clair et je sais quoi faire quand ça dérape. »</div>
+        <div class="tQuote">« Je faisais de très bonnes séances… et je m’écroulais au moment clé. Maintenant j’ai un plan mental clair. »</div>
         <div class="tMeta">
           <b>Athlète – sport individuel</b>
           <span>Fondations Mentales</span>
@@ -624,7 +559,7 @@
 
       <div class="tCard">
         <div class="stars">★★★★★</div>
-        <div class="tQuote">« Le vrai changement : l’exécution. Moins de bruit mental, une activation réglée, et une précision qui ne tombe plus quand je doute. »</div>
+        <div class="tQuote">« Moins de bruit mental, activation réglée, et une précision qui ne tombe plus quand je doute. »</div>
         <div class="tMeta">
           <b>Compétiteur – objectif qualification</b>
           <span>Performance Saison</span>
@@ -633,7 +568,7 @@
 
       <div class="tCard">
         <div class="stars">★★★★★</div>
-        <div class="tQuote">« Jérémy ne motive pas : il structure. C’est carré, mesurable, applicable. On a monté une routine simple et je la répète comme un entraînement. »</div>
+        <div class="tQuote">« Il ne motive pas : il structure. C’est carré, mesurable, applicable. Je répète la routine comme un entraînement. »</div>
         <div class="tMeta">
           <b>Athlète – discipline technique</b>
           <span>Séances individuelles</span>
@@ -642,7 +577,7 @@
 
       <div class="tCard">
         <div class="stars">★★★★★</div>
-        <div class="tQuote">« Avec la présence sur meeting, j’ai gagné en stabilité. Briefing, recalibrage, débrief : j’avance plus vite entre chaque compétition. »</div>
+        <div class="tQuote">« Présence sur meeting : briefing, recalibrage, débrief. J’avance plus vite entre chaque compétition. »</div>
         <div class="tMeta">
           <b>Compétiteur – saison importante</b>
           <span>Présence compétition</span>
