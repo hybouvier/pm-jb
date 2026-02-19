@@ -13,7 +13,7 @@
       --card:#121723;
       --line:rgba(255,255,255,.10);
       --text:#f3f6ff;
-      --muted:rgba(243,246,255,.68);
+      --muted:rgba(243,246,255,.70);
       --accent:#8fb3ff;
       --accent2:#7ef0c1;
       --shadow: 0 18px 50px rgba(0,0,0,.45);
@@ -44,17 +44,38 @@
       backdrop-filter: blur(10px) saturate(150%);
       border-bottom:1px solid var(--line);
     }
+
     .nav{
       display:flex; align-items:center; justify-content:space-between; gap:16px;
+    }
+
+    /* --- Brand (logo + title) --- */
+    .brandWrap{display:flex; align-items:center; gap:12px; min-width: 240px;}
+    .logo{
+      width:44px; height:44px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      display:flex; align-items:center; justify-content:center;
+      overflow:hidden;
+      box-shadow: 0 10px 28px rgba(0,0,0,.35);
+    }
+    .logo img{
+      width:100%; height:100%;
+      object-fit:cover;
+      display:block;
+      transform: translateZ(0);
     }
     .brand{
       display:flex; flex-direction:column; line-height:1.1;
     }
     .brand strong{font-size:14px; letter-spacing:.5px}
     .brand span{font-size:12px; color:var(--muted)}
+
     nav{
       display:flex; gap:16px; flex-wrap:wrap;
       font-size:13px; color:var(--muted);
+      justify-content:center;
     }
     nav a{ text-decoration:none; padding:8px 10px; border-radius:10px; }
     nav a:hover{ background:rgba(255,255,255,.06); color:var(--text); }
@@ -65,33 +86,33 @@
       border-radius:12px;
       border:1px solid var(--line);
       text-decoration:none;
-      font-weight:650;
+      font-weight:700;
       font-size:13px;
       gap:10px;
       background:rgba(255,255,255,.04);
+      white-space:nowrap;
     }
     .btn:hover{ background:rgba(255,255,255,.08); }
     .btn.primary{
       background: linear-gradient(135deg, rgba(143,179,255,.95), rgba(126,240,193,.75));
       color:#0b0d10;
       border:0;
+      box-shadow: 0 16px 38px rgba(0,0,0,.35);
     }
     .btn.primary:hover{ filter:brightness(1.03); }
+    .btn.ghost{ background:transparent; }
 
     .grid{display:grid; gap:18px;}
-    .hero{
-      padding:38px 0 10px;
-    }
-    .heroGrid{
-      grid-template-columns: 1.15fr .85fr;
-      align-items:stretch;
-    }
+    .hero{ padding:38px 0 10px; }
+    .heroGrid{ grid-template-columns: 1.15fr .85fr; align-items:stretch; }
     .panel{
       background:rgba(15,18,23,.72);
       border:1px solid var(--line);
       border-radius:var(--radius);
       box-shadow: var(--shadow);
     }
+
+    /* --- HERO copy --- */
     .heroCopy{padding:26px;}
     .kicker{
       display:inline-flex; gap:10px; flex-wrap:wrap;
@@ -106,23 +127,33 @@
     }
     h1{
       margin:6px 0 10px;
-      font-size:40px;
-      line-height:1.05;
-      letter-spacing:-.4px;
+      font-size:42px;
+      line-height:1.03;
+      letter-spacing:-.6px;
     }
     .lead{font-size:16px; color:var(--muted); margin:0 0 14px;}
-    .promise{
+    .hook{
+      margin:10px 0 12px;
       font-size:18px;
-      margin:0 0 14px;
+      color:rgba(243,246,255,.88);
+    }
+    .hook b{color:var(--text)}
+    .promise{
+      font-size:16px;
+      margin:0 0 10px;
+      color:rgba(243,246,255,.86);
     }
     .signature{
       margin-top:14px;
-      font-weight:700;
+      font-weight:800;
       letter-spacing:.4px;
-      color:rgba(243,246,255,.86);
+      color:rgba(243,246,255,.92);
     }
-    .signature small{display:block; font-weight:600; color:var(--muted); margin-top:6px; letter-spacing:0}
+    .signature small{display:block; font-weight:650; color:var(--muted); margin-top:6px; letter-spacing:0}
+
     .heroActions{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px;}
+    .miniContacts{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;}
+
     .stats{
       display:grid; grid-template-columns: repeat(3, 1fr);
       gap:10px; padding:14px; margin-top:18px;
@@ -135,6 +166,7 @@
     .stat b{display:block; font-size:14px;}
     .stat span{display:block; font-size:12px; color:var(--muted); margin-top:2px;}
 
+    /* --- HERO visual --- */
     .heroVisual{
       padding:18px;
       display:flex; flex-direction:column; gap:12px;
@@ -150,7 +182,7 @@
         radial-gradient(400px 220px at 70% 60%, rgba(126,240,193,.12), transparent 60%),
         rgba(255,255,255,.02);
       display:flex; align-items:center; justify-content:center;
-      color:rgba(243,246,255,.6);
+      color:rgba(243,246,255,.65);
       text-align:center;
       padding:18px;
     }
@@ -170,6 +202,7 @@
     }
     .sub{margin:0 0 16px; color:var(--muted);}
 
+    /* --- Offers --- */
     .cards{grid-template-columns: repeat(3, 1fr);}
     .card{
       padding:18px;
@@ -192,16 +225,16 @@
       white-space:nowrap;
     }
     .price{
-      font-size:20px; font-weight:800;
+      font-size:20px; font-weight:900;
       letter-spacing:-.2px;
       margin:6px 0 10px;
     }
-    ul{margin:10px 0 0 18px; color:rgba(243,246,255,.78)}
+    ul{margin:10px 0 0 18px; color:rgba(243,246,255,.80)}
     li{margin:6px 0;}
     .card .btn{margin-top:14px; width:100%;}
     .card.featured{
       border-color: rgba(143,179,255,.45);
-      background: linear-gradient(180deg, rgba(18,23,35,.85), rgba(18,23,35,.65));
+      background: linear-gradient(180deg, rgba(18,23,35,.88), rgba(18,23,35,.62));
       position:relative;
       overflow:hidden;
     }
@@ -214,12 +247,49 @@
       pointer-events:none;
     }
 
+    /* --- Two columns / Panels --- */
     .twoCol{grid-template-columns: 1fr 1fr;}
     .listPanel{padding:18px;}
-    .divider{
-      height:1px; background:var(--line); margin:18px 0;
-    }
+    .divider{height:1px; background:var(--line); margin:18px 0;}
 
+    /* --- FAQ --- */
+    .faqGrid{grid-template-columns: 1fr;}
+    details{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      border-radius:14px;
+      padding:14px 14px;
+    }
+    details + details{margin-top:10px;}
+    summary{
+      cursor:pointer;
+      list-style:none;
+      font-weight:800;
+      letter-spacing:.2px;
+      outline:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    summary::-webkit-details-marker{display:none}
+    .faqA{
+      color:var(--muted);
+      margin-top:10px;
+      padding-top:10px;
+      border-top:1px solid var(--line);
+    }
+    .chev{
+      width:28px; height:28px;
+      border-radius:10px;
+      border:1px solid var(--line);
+      display:flex; align-items:center; justify-content:center;
+      background:rgba(255,255,255,.03);
+      flex:0 0 auto;
+    }
+    details[open] .chev{transform: rotate(180deg);}
+
+    /* --- Footer --- */
     footer{
       padding:26px 0 40px;
       border-top:1px solid var(--line);
@@ -239,6 +309,7 @@
       .twoCol{grid-template-columns:1fr;}
       .stats{grid-template-columns:1fr;}
       header .btn.primary{display:none;}
+      nav{display:none;}
     }
   </style>
 </head>
@@ -247,19 +318,29 @@
 
 <header>
   <div class="container nav">
-    <div class="brand">
-      <strong>Jérémy BOUVIER – Préparateur Mental</strong>
-      <span>Sport individuel & disciplines de précision</span>
+
+    <!-- LOGO en haut à gauche -->
+    <div class="brandWrap">
+      <div class="logo" title="Logo">
+        <!-- IMPORTANT : mets ton fichier logo à la racine du repo et nomme-le logo.png -->
+        <img src="logo.png" alt="Logo" />
+      </div>
+      <div class="brand">
+        <strong>Jérémy BOUVIER – Préparateur Mental</strong>
+        <span>Sport individuel & disciplines de précision</span>
+      </div>
     </div>
 
     <nav aria-label="Navigation">
       <a href="#offres">Programmes</a>
       <a href="#meeting">Présence compétition</a>
       <a href="#methode">Méthode</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
 
-    <a class="btn primary" href="#contact">Réserver un appel</a>
+    <!-- CTA header -->
+    <a class="btn primary" href="#contact">Appel Stratégique GRATUIT</a>
   </div>
 </header>
 
@@ -276,18 +357,31 @@
           <span class="pill">Pression</span>
         </div>
 
-        <h1>Construire un mental stable, précis et décisif dans les moments qui comptent.</h1>
+        <!-- HERO optimisé -->
+        <h1>Quand l’enjeu monte, l’exécution doit rester stable.</h1>
+
+        <p class="hook">
+          Tu peux être excellent… et perdre de la précision sur <b>un détail mental</b> :
+          rythme, focus, après-erreur, pression.
+        </p>
 
         <p class="lead">
-          Tu es prêt techniquement. La différence se joue quand l’enjeu monte : focus, régulation, exécution.
+          J’accompagne les sportifs en <b>sport individuel</b> et <b>disciplines de précision</b> à structurer un mental
+          stable, précis et décisif dans les moments qui comptent.
         </p>
 
         <p class="promise"><b>La performance se structure.</b></p>
 
         <div class="heroActions">
-          <!-- Remplace le lien par ton Calendly / formulaire -->
-          <a class="btn primary" href="#contact">Appel stratégique (20 min)</a>
+          <a class="btn primary" href="#contact">Appel Stratégique GRATUIT (20 min)</a>
           <a class="btn" href="#offres">Voir les programmes</a>
+          <a class="btn ghost" href="#meeting">Présence compétition</a>
+        </div>
+
+        <!-- Contacts rapides -->
+        <div class="miniContacts">
+          <a class="btn" href="tel:0661962653">📞 06 61 96 26 53</a>
+          <a class="btn" href="mailto:hybouvier@gmail.com">✉️ hybouvier@gmail.com</a>
         </div>
 
         <div class="stats">
@@ -306,14 +400,14 @@
         <div class="visualBox">
           <div>
             <b>Zone visuel premium</b><br/>
-            (photo athlète / précision)<br/>
-            <span style="font-size:12px;opacity:.8">Tu pourras la remplacer par une image + logo.</span>
+            Photo athlète / précision (à intégrer)<br/>
+            <span style="font-size:12px;opacity:.8">Si tu me donnes une photo, je te mets le code prêt.</span>
           </div>
         </div>
 
         <div class="note">
           <b>Pour qui ?</b><br/>
-          Athlètes en sport individuel & précision qui veulent une exécution stable le jour J, pas “un bon feeling”.
+          Athlètes qui veulent une exécution stable le jour J — pas “un bon feeling”.
         </div>
       </div>
 
@@ -323,7 +417,7 @@
   <!-- OFFRES -->
   <section class="container" id="offres">
     <h2>Programmes</h2>
-    <p class="sub">3 formats clairs. Une logique : structurer le mental comme l’entraînement.</p>
+    <p class="sub">3 formats. Une logique : structurer le mental comme l’entraînement.</p>
 
     <div class="grid cards">
       <article class="card">
@@ -339,7 +433,7 @@
           <li>Pression / blocage / focus</li>
           <li>Mini plan d’action</li>
         </ul>
-        <a class="btn" href="#contact">Réserver</a>
+        <a class="btn" href="#contact">Appel Stratégique GRATUIT</a>
       </article>
 
       <article class="card">
@@ -355,7 +449,7 @@
           <li>Confiance / blocages / pression</li>
           <li>Plan d’action personnalisé</li>
         </ul>
-        <a class="btn" href="#contact">Découvrir</a>
+        <a class="btn" href="#contact">Appel Stratégique GRATUIT</a>
       </article>
 
       <article class="card featured">
@@ -373,7 +467,7 @@
           <li>Audio d’activation</li>
           <li>Évaluation avant / après</li>
         </ul>
-        <a class="btn primary" href="#contact">Candidater / Appel stratégique</a>
+        <a class="btn primary" href="#contact">Appel Stratégique GRATUIT</a>
       </article>
     </div>
   </section>
@@ -395,7 +489,7 @@
           <li>Débriefing immédiat</li>
           <li>Rapport stratégique post compétition</li>
         </ul>
-        <a class="btn primary" href="#contact">Demander une disponibilité</a>
+        <a class="btn primary" href="#contact">Vérifier une disponibilité</a>
       </div>
 
       <div class="card listPanel">
@@ -446,22 +540,95 @@
     </style>
   </section>
 
+  <!-- FAQ -->
+  <section class="container" id="faq">
+    <div class="divider"></div>
+    <h2>FAQ</h2>
+    <p class="sub">Réponses rapides aux questions les plus fréquentes.</p>
+
+    <div class="grid faqGrid">
+      <details>
+        <summary>
+          Est-ce que l’appel stratégique est vraiment gratuit ?
+          <span class="chev">⌄</span>
+        </summary>
+        <div class="faqA">
+          Oui. C’est un échange de 20 minutes pour analyser ta situation, ton objectif et déterminer si un accompagnement
+          est pertinent. Si ce n’est pas le bon moment, je te le dis clairement.
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          Je fais déjà de bonnes performances à l’entraînement, mais pas en compétition. Normal ?
+          <span class="chev">⌄</span>
+        </summary>
+        <div class="faqA">
+          Très fréquent en sport individuel / précision. L’enjeu modifie le rythme, la respiration, l’attention et la gestion
+          de l’erreur. On structure un plan mental et des routines pour stabiliser l’exécution le jour J.
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          Présentiel ou visio : qu’est-ce qui marche le mieux ?
+          <span class="chev">⌄</span>
+        </summary>
+        <div class="faqA">
+          Les deux fonctionnent. On choisit en fonction de ton contexte. L’important, c’est la structure et l’application
+          en contexte réel (entraînement / compétition).
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          Les briefings / débriefings : c’est comment ?
+          <span class="chev">⌄</span>
+        </summary>
+        <div class="faqA">
+          Tu choisis le format : visio, vocal ou écrit structuré. L’objectif est d’arriver avec un plan clair avant, et d’ajuster
+          immédiatement après pour progresser vite.
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          Est-ce que tu prends tout le monde ?
+          <span class="chev">⌄</span>
+        </summary>
+        <div class="faqA">
+          Non. J’accompagne des profils engagés qui veulent structurer leur performance. L’appel sert aussi à vérifier l’adéquation.
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          Je peux te contacter directement sans Calendly ?
+          <span class="chev">⌄</span>
+        </summary>
+        <div class="faqA">
+          Oui. Tu peux appeler ou envoyer un mail, et on cale un créneau simplement.
+        </div>
+      </details>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section class="container" id="contact">
     <div class="divider"></div>
     <div class="panel" style="padding:22px;">
-      <h2>Appel stratégique</h2>
-      <p class="sub">20 minutes • sans engagement • diagnostic rapide • on décide ensuite si on structure.</p>
+      <h2>Appel Stratégique GRATUIT</h2>
+      <p class="sub">20 minutes • sans engagement • analyse rapide • décision stratégique ensuite.</p>
 
       <div class="heroActions">
-        <!-- Remplace par ton lien Calendly ou ton mail -->
-        <a class="btn primary" href="#">Réserver l’appel</a>
-        <a class="btn" href="#top">Revenir en haut</a>
+        <a class="btn primary" href="tel:0661962653">📞 06 61 96 26 53</a>
+        <a class="btn" href="mailto:hybouvier@gmail.com">✉️ hybouvier@gmail.com</a>
+        <a class="btn ghost" href="#top">Revenir en haut</a>
       </div>
 
       <p class="sub" style="margin-top:14px;">
         <b>Jérémy BOUVIER – Préparateur Mental</b><br/>
-        <span style="color:rgba(243,246,255,.68)">Stratège en Performance • La performance se structure.</span>
+        <span style="color:rgba(243,246,255,.70)">Stratège en Performance • La performance se structure.</span>
       </p>
     </div>
   </section>
@@ -471,8 +638,9 @@
 <footer>
   <div class="container foot">
     <div>
-      <b style="color:rgba(243,246,255,.85)">Jérémy BOUVIER – Préparateur Mental</b><br/>
-      <span>Stratège en Performance • La performance se structure.</span>
+      <b style="color:rgba(243,246,255,.88)">Jérémy BOUVIER – Préparateur Mental</b><br/>
+      <span>Stratège en Performance • La performance se structure.</span><br/>
+      <span>📞 06 61 96 26 53 • ✉️ hybouvier@gmail.com</span>
     </div>
     <div>
       <span>© <script>document.write(new Date().getFullYear())</script> • Tous droits réservés</span>
