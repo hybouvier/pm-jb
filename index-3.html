@@ -1,371 +1,125 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HyBou – Stratège Performance</title>
-  <meta name="description" content="HyBou – Stratège Performance : mental stable, précis et décisif sous pression. Sport individuel & disciplines de précision." />
-  <style>
-    /* ====== Wireframe prêt Cloudflare (simple, propre, responsive) ====== */
-    :root{
-      --text:#111;
-      --muted:#666;
-      --line:#e9e9e9;
-      --bg:#fff;
-      --card:#fff;
-      --radius:18px;
-      --radius2:12px;
-      --max:1100px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:var(--text);
-      background:var(--bg);
-      line-height:1.45;
-    }
-    a{color:inherit}
-    .container{max-width:var(--max); margin:0 auto; padding:24px;}
-    header{
-      position:sticky; top:0; z-index:20;
-      background:rgba(255,255,255,.92);
-      backdrop-filter:saturate(160%) blur(10px);
-      border-bottom:1px solid var(--line);
-    }
-    .nav{
-      display:flex; align-items:center; justify-content:space-between; gap:14px;
-    }
-    .nav a{ text-decoration:none; }
-    .nav-links{
-      display:flex; gap:14px; flex-wrap:wrap;
-      font-size:14px; color:var(--muted);
-    }
-    .logo{
-      font-weight:800; letter-spacing:.4px;
-    }
-    .row{display:grid; gap:20px;}
-    .row-2{grid-template-columns: 1.2fr 1fr;}
-    .row-3{grid-template-columns: repeat(3, 1fr);}
-    .row-4{grid-template-columns: repeat(4, 1fr);}
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:18px;
-    }
-    h1{font-size:38px; line-height:1.08; margin:10px 0 8px;}
-    h2{font-size:26px; margin:0 0 10px;}
-    h3{font-size:18px; margin:0 0 8px;}
-    p{margin:0 0 12px;}
-    .muted{color:var(--muted);}
-    .badge{
-      display:inline-block;
-      padding:6px 12px;
-      border:1px solid #ddd;
-      border-radius:999px;
-      font-size:12px;
-      color:var(--muted);
-      background:#fff;
-    }
-    .chips{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;}
-    .cta{
-      display:inline-block;
-      padding:12px 16px;
-      border:1px solid var(--text);
-      border-radius:14px;
-      text-decoration:none;
-      font-weight:650;
-      font-size:14px;
-    }
-    .cta.primary{background:var(--text); color:#fff;}
-    .cta-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;}
-    ul{margin:10px 0 0 18px;}
-    li{margin:6px 0;}
-    .hero{
-      padding-top:6px;
-    }
-    .hero-visual{
-      border:1px dashed #d8d8d8;
-      border-radius:var(--radius2);
-      height:270px;
-      background:linear-gradient(180deg,#fafafa, #fff);
-    }
-    .highlight{
-      border-width:2px;
-    }
-    .section{padding:10px 0;}
-    .divider{height:1px; background:var(--line); margin:18px 0;}
-    footer{padding-bottom:30px;}
-    /* Responsive */
-    @media (max-width: 980px){
-      .row-2{grid-template-columns:1fr;}
-      .row-3{grid-template-columns:1fr;}
-      .row-4{grid-template-columns:1fr;}
-      h1{font-size:32px;}
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HyBou – Stratège Performance</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#ffffff;
+  color:#111;
+  line-height:1.5;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+h1{font-size:38px;margin-bottom:10px;}
+h2{margin-top:60px;}
+h3{margin-bottom:10px;}
+p{margin-bottom:15px;}
+
+.hero{
+  padding:80px 20px;
+  text-align:center;
+  background:#f7f7f7;
+}
+
+.button{
+  display:inline-block;
+  padding:14px 22px;
+  background:#111;
+  color:#fff;
+  text-decoration:none;
+  border-radius:8px;
+  margin-top:20px;
+}
+
+.card{
+  border:1px solid #ddd;
+  padding:25px;
+  border-radius:12px;
+  margin-top:20px;
+}
+
+.pricing{
+  font-weight:bold;
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+footer{
+  margin-top:80px;
+  padding:40px 20px;
+  text-align:center;
+  background:#f7f7f7;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <div class="container nav">
-    <div class="logo">HYBOU</div>
+<section class="hero">
+  <h1>HyBou – Stratège Performance</h1>
+  <p><strong>Construire un mental stable, précis et décisif dans les moments qui comptent.</strong></p>
+  <p><strong>La performance se structure.</strong></p>
+  <a href="#contact" class="button">Réserver un appel stratégique</a>
+</section>
 
-    <nav class="nav-links" aria-label="Navigation principale">
-      <a href="#offres">Offres</a>
-      <a href="#meeting">Présence Meeting</a>
-      <a href="#methode">Méthode</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<div class="container">
 
-    <a class="cta primary" href="#contact">Réserver un appel</a>
+  <h2>Pour les athlètes qui refusent l’improvisation mentale</h2>
+  <p>Sport individuel. Discipline de précision. Compétition.</p>
+
+  <h2>Programmes</h2>
+
+  <div class="card">
+    <h3>Séance Individuelle</h3>
+    <div class="pricing">140€</div>
+    <p>Intervention ciblée et ajustement stratégique.</p>
   </div>
-</header>
 
-<main>
+  <div class="card">
+    <h3>Programme Fondations Mentales</h3>
+    <div class="pricing">690€</div>
+    <p>5 séances pour structurer les bases mentales stables et performantes.</p>
+  </div>
 
-  <!-- HERO -->
-  <section class="container hero" id="top">
-    <div class="row row-2">
-      <div>
-        <span class="badge">Sport individuel • Précision • Compétition</span>
-        <h1>HyBou – Stratège Performance</h1>
-        <p style="font-size:18px;">
-          <strong>Construire un mental stable, précis et décisif dans les moments qui comptent.</strong>
-        </p>
-        <p class="muted"><strong>La performance se structure.</strong></p>
+  <div class="card">
+    <h3>Programme Performance Saison</h3>
+    <div class="pricing">1200€</div>
+    <ul>
+      <li>8 séances individuelles</li>
+      <li>3 briefings + 3 débriefings</li>
+      <li>Plan mental personnalisé</li>
+      <li>Audio d’activation</li>
+      <li>Évaluation avant / après</li>
+    </ul>
+  </div>
 
-        <div class="cta-row">
-          <a class="cta primary" href="#contact">Réserver un appel stratégique (20 min)</a>
-          <a class="cta" href="#offres">Voir les programmes</a>
-        </div>
+  <h2>Présence Stratégique Compétition</h2>
 
-        <div class="chips">
-          <span class="badge">Stabilité sous pression</span>
-          <span class="badge">Exécution</span>
-          <span class="badge">Régularité</span>
-        </div>
-      </div>
+  <div class="card">
+    <ul>
+      <li>700€ / 1 jour + frais réels VHR</li>
+      <li>1200€ / 2 jours + VHR</li>
+      <li>1650€ / 3 jours + VHR</li>
+      <li>1950€ / 4 jours + VHR</li>
+    </ul>
+    <p><strong>Cas particulier : tarif sur demande</strong></p>
+  </div>
 
-      <div class="card" aria-label="Visuel principal">
-        <p class="muted" style="margin-bottom:12px;">
-          Zone visuel premium (photo athlète / précision).<br>
-          Remplace cette zone par ton image (ou un fond).
-        </p>
-        <div class="hero-visual"></div>
-      </div>
-    </div>
-  </section>
+  <h2>Méthode HyBou</h2>
+  <p>Diagnostic. Structuration. Protocoles pression & focus. Exécution en contexte réel.</p>
 
-  <!-- TRUST BAR -->
-  <section class="container section">
-    <div class="card">
-      <div class="chips" style="margin-top:0;">
-        <span class="badge">Approche structurée</span>
-        <span class="badge">Contexte réel</span>
-        <span class="badge">Protocoles pression & focus</span>
-        <span class="badge">Suivi compétition</span>
-        <span class="badge">Plan mental personnalisé</span>
-      </div>
-    </div>
-  </section>
+</div>
 
-  <!-- POUR QUI -->
-  <section class="container section" id="pour-qui">
-    <h2>Pour les athlètes qui refusent l’improvisation mentale</h2>
-    <div class="row row-2">
-      <div class="card">
-        <h3>C’est pour toi si…</h3>
-        <ul>
-          <li>Tu es solide techniquement mais variable sous pression.</li>
-          <li>Tu veux stabiliser ton exécution quand l’enjeu augmente.</li>
-          <li>Tu veux un plan mental clair, applicable en compétition.</li>
-          <li>Tu veux maîtriser l’après-erreur et rester dans ton rythme.</li>
-          <li>Tu veux structurer ta performance, pas “essayer”.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Ce n’est pas pour toi si…</h3>
-        <ul>
-          <li>Tu cherches uniquement de la motivation.</li>
-          <li>Tu veux une solution magique sans application.</li>
-          <li>Tu ne veux pas structurer tes routines.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ROLE -->
-  <section class="container section" id="role">
-    <div class="card">
-      <h2>Je ne motive pas. Je structure.</h2>
-      <p class="muted">
-        Mon rôle : stabiliser ton mental en contexte réel pour optimiser ton exécution dans les moments décisifs.
-      </p>
-      <div class="chips">
-        <span class="badge">Pression</span>
-        <span class="badge">Activation</span>
-        <span class="badge">Focus</span>
-        <span class="badge">Gestion de l’erreur</span>
-        <span class="badge">Routine compétition</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- OFFRES -->
-  <section class="container section" id="offres">
-    <h2>Programmes</h2>
-    <div class="row row-3">
-      <div class="card">
-        <h3>Séance Individuelle</h3>
-        <p><strong>140€</strong></p>
-        <ul>
-          <li>Intervention ciblée</li>
-          <li>Ajustement stratégique</li>
-          <li>Mini plan d’action</li>
-        </ul>
-        <div class="cta-row">
-          <a class="cta" href="#contact">Réserver</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Programme Fondations Mentales</h3>
-        <p><strong>690€</strong></p>
-        <ul>
-          <li>5 séances</li>
-          <li>Confiance / blocages</li>
-          <li>Stress / pression</li>
-          <li>Plan d’action</li>
-        </ul>
-        <div class="cta-row">
-          <a class="cta" href="#contact">Découvrir</a>
-        </div>
-      </div>
-
-      <div class="card highlight">
-        <span class="badge">Recommandé</span>
-        <h3 style="margin-top:10px;">Programme Performance Saison</h3>
-        <p><strong>1200€</strong></p>
-        <ul>
-          <li>8 séances individuelles</li>
-          <li>3 briefings + 3 débriefings (format au choix)</li>
-          <li>Audio activation</li>
-          <li>Plan mental compétition</li>
-          <li>Évaluation avant / après</li>
-          <li>Support prioritaire structuré</li>
-        </ul>
-        <div class="cta-row">
-          <a class="cta primary" href="#contact">Candidater / Appel stratégique</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOCUS PROGRAMME -->
-  <section class="container section" id="focus-saison">
-    <h2>Quand l’enjeu augmente, l’exécution doit rester stable</h2>
-    <div class="row row-3">
-      <div class="card">
-        <h3>Avant</h3>
-        <ul>
-          <li>Routine</li>
-          <li>Activation</li>
-          <li>Plan mental</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Pendant</h3>
-        <ul>
-          <li>Focus</li>
-          <li>Recalibrage</li>
-          <li>Gestion erreur</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Après</h3>
-        <ul>
-          <li>Débrief</li>
-          <li>Ajustements</li>
-          <li>Progression</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- MEETING -->
-  <section class="container section" id="meeting">
-    <h2>Présence Stratégique Compétition</h2>
-    <div class="row row-2">
-      <div class="card">
-        <h3>Sur place – Jour J</h3>
-        <ul>
-          <li>Briefing mental pré épreuve</li>
-          <li>Ajustement activation</li>
-          <li>Gestion pression en temps réel</li>
-          <li>Recalibrage entre séries / manches</li>
-          <li>Débriefing immédiat</li>
-          <li>Rapport stratégique post compétition</li>
-        </ul>
-        <div class="cta-row">
-          <a class="cta primary" href="#contact">Demander une disponibilité</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Tarification</h3>
-        <ul>
-          <li><strong>700€</strong> / 1 jour + frais réels VHR</li>
-          <li><strong>1200€</strong> / 2 jours + frais réels VHR</li>
-          <li><strong>1650€</strong> / 3 jours + frais réels VHR</li>
-          <li><strong>1950€</strong> / 4 jours + frais réels VHR</li>
-        </ul>
-        <p class="muted" style="margin-top:10px;">VHR : véhicule • hébergement • restauration (frais réels).</p>
-        <p><strong>Cas particulier :</strong> tarif sur demande.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- METHODE -->
-  <section class="container section" id="methode">
-    <h2>Méthode HyBou</h2>
-    <div class="row row-4">
-      <div class="card"><h3>1. Diagnostic</h3><p class="muted">Profil compétiteur & points d’instabilité.</p></div>
-      <div class="card"><h3>2. Structuration</h3><p class="muted">Routines, plan mental, repères.</p></div>
-      <div class="card"><h3>3. Protocoles</h3><p class="muted">Pression, focus, précision.</p></div>
-      <div class="card"><h3>4. Exécution</h3><p class="muted">Application en contexte réel.</p></div>
-    </div>
-  </section>
-
-  <!-- CTA FINAL -->
-  <section class="container section" id="contact">
-    <div class="card">
-      <h2>Prêt à structurer ta performance ?</h2>
-      <p class="muted">20 minutes • sans engagement • diagnostic rapide</p>
-
-      <!-- Remplace le lien par ton Calendly / formulaire / mail -->
-      <div class="cta-row">
-        <a class="cta primary" href="#" aria-label="Réserver un appel stratégique">Réserver un appel stratégique</a>
-        <a class="cta" href="#top">Revenir en haut</a>
-      </div>
-
-      <div class="divider"></div>
-
-      <p style="margin-bottom:0;">
-        <strong>HyBou – Stratège Performance</strong><br>
-        Construire un mental stable, précis et décisif dans les moments qui comptent.<br>
-        <strong>La performance se structure.</strong>
-      </p>
-    </div>
-  </section>
-
-</main>
-
-<footer class="container">
-  <p class="muted">© HyBou • Mentions légales • Politique de confidentialité</p>
-</footer>
-
-</body>
-</html>
+<footer id="contact">
+  <p><strong>HyBou – Stratège Performance</strong></p>
+  <p>Construire un mental stable, précis et décisif dans les m
