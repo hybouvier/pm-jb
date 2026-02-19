@@ -1,117 +1,483 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jérémy BOUVIER – Préparateur Mental</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jérémy BOUVIER – Préparateur Mental</title>
+  <meta name="description" content="Jérémy BOUVIER – Préparateur Mental. Sport individuel & disciplines de précision. Structurer un mental stable, précis et décisif sous pression." />
 
-<style>
-body{
-  margin:0;
-  font-family:Arial, Helvetica, sans-serif;
-  background:#ffffff;
-  color:#111;
-  line-height:1.6;
-}
+  <style>
+    :root{
+      --bg:#0b0d10;
+      --panel:#0f1217;
+      --card:#121723;
+      --line:rgba(255,255,255,.10);
+      --text:#f3f6ff;
+      --muted:rgba(243,246,255,.68);
+      --accent:#8fb3ff;
+      --accent2:#7ef0c1;
+      --shadow: 0 18px 50px rgba(0,0,0,.45);
+      --radius:18px;
+      --radius2:14px;
+      --max:1100px;
+    }
 
-.hero{
-  padding:90px 20px;
-  text-align:center;
-  background:#f4f4f4;
-}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(1200px 700px at 15% 10%, rgba(143,179,255,.18), transparent 55%),
+        radial-gradient(900px 600px at 85% 20%, rgba(126,240,193,.12), transparent 55%),
+        radial-gradient(1000px 700px at 50% 110%, rgba(143,179,255,.10), transparent 60%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
 
-.container{
-  max-width:1000px;
-  margin:auto;
-  padding:50px 20px;
-}
+    a{color:inherit}
+    .container{max-width:var(--max); margin:0 auto; padding:24px;}
+    header{
+      position:sticky; top:0; z-index:30;
+      background:rgba(11,13,16,.65);
+      backdrop-filter: blur(10px) saturate(150%);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between; gap:16px;
+    }
+    .brand{
+      display:flex; flex-direction:column; line-height:1.1;
+    }
+    .brand strong{font-size:14px; letter-spacing:.5px}
+    .brand span{font-size:12px; color:var(--muted)}
+    nav{
+      display:flex; gap:16px; flex-wrap:wrap;
+      font-size:13px; color:var(--muted);
+    }
+    nav a{ text-decoration:none; padding:8px 10px; border-radius:10px; }
+    nav a:hover{ background:rgba(255,255,255,.06); color:var(--text); }
 
-h1{font-size:38px;margin-bottom:10px;}
-h2{margin-top:60px;}
-h3{margin-bottom:10px;}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:11px 14px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      text-decoration:none;
+      font-weight:650;
+      font-size:13px;
+      gap:10px;
+      background:rgba(255,255,255,.04);
+    }
+    .btn:hover{ background:rgba(255,255,255,.08); }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(143,179,255,.95), rgba(126,240,193,.75));
+      color:#0b0d10;
+      border:0;
+    }
+    .btn.primary:hover{ filter:brightness(1.03); }
 
-.button{
-  display:inline-block;
-  padding:14px 22px;
-  background:#111;
-  color:#fff;
-  text-decoration:none;
-  border-radius:6px;
-  margin-top:25px;
-}
+    .grid{display:grid; gap:18px;}
+    .hero{
+      padding:38px 0 10px;
+    }
+    .heroGrid{
+      grid-template-columns: 1.15fr .85fr;
+      align-items:stretch;
+    }
+    .panel{
+      background:rgba(15,18,23,.72);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .heroCopy{padding:26px;}
+    .kicker{
+      display:inline-flex; gap:10px; flex-wrap:wrap;
+      font-size:12px; color:var(--muted);
+      margin-bottom:10px;
+    }
+    .pill{
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:6px 10px;
+      background:rgba(255,255,255,.03);
+    }
+    h1{
+      margin:6px 0 10px;
+      font-size:40px;
+      line-height:1.05;
+      letter-spacing:-.4px;
+    }
+    .lead{font-size:16px; color:var(--muted); margin:0 0 14px;}
+    .promise{
+      font-size:18px;
+      margin:0 0 14px;
+    }
+    .signature{
+      margin-top:14px;
+      font-weight:700;
+      letter-spacing:.4px;
+      color:rgba(243,246,255,.86);
+    }
+    .signature small{display:block; font-weight:600; color:var(--muted); margin-top:6px; letter-spacing:0}
+    .heroActions{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px;}
+    .stats{
+      display:grid; grid-template-columns: repeat(3, 1fr);
+      gap:10px; padding:14px; margin-top:18px;
+      border-top:1px solid var(--line);
+    }
+    .stat{
+      padding:10px 12px; border:1px solid var(--line);
+      border-radius:14px; background:rgba(255,255,255,.03);
+    }
+    .stat b{display:block; font-size:14px;}
+    .stat span{display:block; font-size:12px; color:var(--muted); margin-top:2px;}
 
-.card{
-  border:1px solid #ddd;
-  padding:25px;
-  border-radius:10px;
-  margin-top:20px;
-}
+    .heroVisual{
+      padding:18px;
+      display:flex; flex-direction:column; gap:12px;
+      justify-content:space-between;
+      border-radius:var(--radius);
+    }
+    .visualBox{
+      border:1px dashed rgba(255,255,255,.18);
+      border-radius:16px;
+      min-height:220px;
+      background:
+        radial-gradient(500px 260px at 30% 25%, rgba(143,179,255,.18), transparent 60%),
+        radial-gradient(400px 220px at 70% 60%, rgba(126,240,193,.12), transparent 60%),
+        rgba(255,255,255,.02);
+      display:flex; align-items:center; justify-content:center;
+      color:rgba(243,246,255,.6);
+      text-align:center;
+      padding:18px;
+    }
+    .note{
+      font-size:12px; color:var(--muted);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:12px;
+      background:rgba(255,255,255,.03);
+    }
 
-.signature{
-  text-align:center;
-  margin-top:60px;
-  font-style:italic;
-  font-size:18px;
-}
-</style>
+    section{padding:18px 0;}
+    h2{
+      margin:0 0 10px;
+      font-size:24px;
+      letter-spacing:-.2px;
+    }
+    .sub{margin:0 0 16px; color:var(--muted);}
+
+    .cards{grid-template-columns: repeat(3, 1fr);}
+    .card{
+      padding:18px;
+      border-radius:var(--radius);
+      background:rgba(18,23,35,.75);
+      border:1px solid var(--line);
+      box-shadow: 0 14px 40px rgba(0,0,0,.28);
+    }
+    .card .top{
+      display:flex; align-items:flex-start; justify-content:space-between; gap:12px;
+      margin-bottom:8px;
+    }
+    .badge{
+      font-size:11px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      white-space:nowrap;
+    }
+    .price{
+      font-size:20px; font-weight:800;
+      letter-spacing:-.2px;
+      margin:6px 0 10px;
+    }
+    ul{margin:10px 0 0 18px; color:rgba(243,246,255,.78)}
+    li{margin:6px 0;}
+    .card .btn{margin-top:14px; width:100%;}
+    .card.featured{
+      border-color: rgba(143,179,255,.45);
+      background: linear-gradient(180deg, rgba(18,23,35,.85), rgba(18,23,35,.65));
+      position:relative;
+      overflow:hidden;
+    }
+    .card.featured:before{
+      content:"";
+      position:absolute; inset:-60px -80px auto auto;
+      width:240px; height:240px;
+      background: radial-gradient(circle at 30% 30%, rgba(143,179,255,.35), transparent 60%);
+      transform: rotate(20deg);
+      pointer-events:none;
+    }
+
+    .twoCol{grid-template-columns: 1fr 1fr;}
+    .listPanel{padding:18px;}
+    .divider{
+      height:1px; background:var(--line); margin:18px 0;
+    }
+
+    footer{
+      padding:26px 0 40px;
+      border-top:1px solid var(--line);
+      margin-top:10px;
+      background:rgba(0,0,0,.08);
+    }
+    .foot{
+      display:flex; align-items:flex-start; justify-content:space-between; gap:18px; flex-wrap:wrap;
+      color:var(--muted); font-size:13px;
+    }
+
+    /* Mobile */
+    @media (max-width: 980px){
+      .heroGrid{grid-template-columns: 1fr;}
+      h1{font-size:34px;}
+      .cards{grid-template-columns:1fr;}
+      .twoCol{grid-template-columns:1fr;}
+      .stats{grid-template-columns:1fr;}
+      header .btn.primary{display:none;}
+    }
+  </style>
 </head>
 
 <body>
 
-<section class="hero">
-  <h1>Jérémy BOUVIER – Préparateur Mental</h1>
-  <p><strong>Construire un mental stable, précis et décisif dans les moments qui comptent.</strong></p>
-  <p>Sport individuel. Discipline de précision. Compétition.</p>
-  <a href="#contact" class="button">Réserver un appel stratégique</a>
-</section>
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <strong>Jérémy BOUVIER – Préparateur Mental</strong>
+      <span>Sport individuel & disciplines de précision</span>
+    </div>
 
-<div class="container">
+    <nav aria-label="Navigation">
+      <a href="#offres">Programmes</a>
+      <a href="#meeting">Présence compétition</a>
+      <a href="#methode">Méthode</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-<div class="signature">
-Stratège en Performance
-</div>
+    <a class="btn primary" href="#contact">Réserver un appel</a>
+  </div>
+</header>
 
-<h2>Programmes</h2>
+<main>
 
-<div class="card">
-<h3>Séance Individuelle – 140€</h3>
-<p>Intervention ciblée et ajustement stratégique.</p>
-</div>
+  <!-- HERO -->
+  <section class="container hero" id="top">
+    <div class="grid heroGrid">
 
-<div class="card">
-<h3>Programme Fondations Mentales – 690€</h3>
-<p>5 séances pour structurer les bases mentales stables et performantes.</p>
-</div>
+      <div class="panel heroCopy">
+        <div class="kicker">
+          <span class="pill">Compétition</span>
+          <span class="pill">Précision</span>
+          <span class="pill">Pression</span>
+        </div>
 
-<div class="card">
-<h3>Programme Performance Saison – 1200€</h3>
-<ul>
-<li>8 séances individuelles</li>
-<li>3 briefings + 3 débriefings</li>
-<li>Plan mental personnalisé</li>
-<li>Audio d’activation</li>
-<li>Évaluation avant / après</li>
-</ul>
-</div>
+        <h1>Construire un mental stable, précis et décisif dans les moments qui comptent.</h1>
 
-<h2>Présence Stratégique Compétition</h2>
+        <p class="lead">
+          Tu es prêt techniquement. La différence se joue quand l’enjeu monte : focus, régulation, exécution.
+        </p>
 
-<div class="card">
-<ul>
-<li>700€ / 1 jour + frais VHR</li>
-<li>1200€ / 2 jours + VHR</li>
-<li>1650€ / 3 jours + VHR</li>
-<li>1950€ / 4 jours + VHR</li>
-</ul>
-<p><strong>Cas particulier : tarif sur demande</strong></p>
-</div>
+        <p class="promise"><b>La performance se structure.</b></p>
 
-</div>
+        <div class="heroActions">
+          <!-- Remplace le lien par ton Calendly / formulaire -->
+          <a class="btn primary" href="#contact">Appel stratégique (20 min)</a>
+          <a class="btn" href="#offres">Voir les programmes</a>
+        </div>
 
-<footer id="contact" style="text-align:center;padding:50px;background:#f4f4f4;">
-<p><strong>Jérémy BOUVIER – Préparateur Mental</strong></p>
-<p>Stratège en Performance</p>
-<p>La performance se structure.</p>
+        <div class="stats">
+          <div class="stat"><b>Stabilité</b><span>Garder le niveau sous pression</span></div>
+          <div class="stat"><b>Précision</b><span>Exécuter sans bruit mental</span></div>
+          <div class="stat"><b>Régularité</b><span>Répéter le bon geste, au bon moment</span></div>
+        </div>
+
+        <div class="signature">
+          Stratège en Performance
+          <small>Approche structurée • Contexte réel • Routines & protocoles</small>
+        </div>
+      </div>
+
+      <div class="panel heroVisual">
+        <div class="visualBox">
+          <div>
+            <b>Zone visuel premium</b><br/>
+            (photo athlète / précision)<br/>
+            <span style="font-size:12px;opacity:.8">Tu pourras la remplacer par une image + logo.</span>
+          </div>
+        </div>
+
+        <div class="note">
+          <b>Pour qui ?</b><br/>
+          Athlètes en sport individuel & précision qui veulent une exécution stable le jour J, pas “un bon feeling”.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- OFFRES -->
+  <section class="container" id="offres">
+    <h2>Programmes</h2>
+    <p class="sub">3 formats clairs. Une logique : structurer le mental comme l’entraînement.</p>
+
+    <div class="grid cards">
+      <article class="card">
+        <div class="top">
+          <div>
+            <h3>Séance Individuelle</h3>
+            <div class="price">140€</div>
+          </div>
+          <span class="badge">Ciblée</span>
+        </div>
+        <ul>
+          <li>Analyse rapide + ajustement stratégique</li>
+          <li>Pression / blocage / focus</li>
+          <li>Mini plan d’action</li>
+        </ul>
+        <a class="btn" href="#contact">Réserver</a>
+      </article>
+
+      <article class="card">
+        <div class="top">
+          <div>
+            <h3>Programme Fondations Mentales</h3>
+            <div class="price">690€</div>
+          </div>
+          <span class="badge">5 séances</span>
+        </div>
+        <ul>
+          <li>Stabilité mentale & routines</li>
+          <li>Confiance / blocages / pression</li>
+          <li>Plan d’action personnalisé</li>
+        </ul>
+        <a class="btn" href="#contact">Découvrir</a>
+      </article>
+
+      <article class="card featured">
+        <div class="top">
+          <div>
+            <h3>Programme Performance Saison</h3>
+            <div class="price">1200€</div>
+          </div>
+          <span class="badge">Recommandé</span>
+        </div>
+        <ul>
+          <li>8 séances individuelles</li>
+          <li>3 briefings + 3 débriefings (visio / vocal / écrit)</li>
+          <li>Plan mental compétition personnalisé</li>
+          <li>Audio d’activation</li>
+          <li>Évaluation avant / après</li>
+        </ul>
+        <a class="btn primary" href="#contact">Candidater / Appel stratégique</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- MEETING -->
+  <section class="container" id="meeting">
+    <div class="divider"></div>
+    <h2>Présence Stratégique Compétition</h2>
+    <p class="sub">Présence sur place : briefing, recalibrage, gestion de l’erreur, débrief immédiat. Contexte réel.</p>
+
+    <div class="grid twoCol">
+      <div class="card listPanel">
+        <h3>Ce que je fais sur place</h3>
+        <ul>
+          <li>Briefing mental pré-épreuve</li>
+          <li>Ajustement activation</li>
+          <li>Gestion pression en temps réel</li>
+          <li>Recalibrage entre séries / manches</li>
+          <li>Débriefing immédiat</li>
+          <li>Rapport stratégique post compétition</li>
+        </ul>
+        <a class="btn primary" href="#contact">Demander une disponibilité</a>
+      </div>
+
+      <div class="card listPanel">
+        <h3>Tarification</h3>
+        <ul>
+          <li><b>700€</b> / 1 jour + frais réels VHR</li>
+          <li><b>1200€</b> / 2 jours + VHR</li>
+          <li><b>1650€</b> / 3 jours + VHR</li>
+          <li><b>1950€</b> / 4 jours + VHR</li>
+        </ul>
+        <p class="sub" style="margin-top:12px;">
+          VHR : véhicule • hébergement • restauration (frais réels).<br/>
+          Cas particulier : <b>tarif sur demande</b>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHODE -->
+  <section class="container" id="methode">
+    <div class="divider"></div>
+    <h2>Méthode</h2>
+    <p class="sub">Simple, structurée, orientée exécution.</p>
+
+    <div class="grid cards" style="grid-template-columns:repeat(4,1fr)">
+      <article class="card">
+        <h3>1. Diagnostic</h3>
+        <p class="sub">Profil compétiteur, points d’instabilité, situations déclencheuses.</p>
+      </article>
+      <article class="card">
+        <h3>2. Structuration</h3>
+        <p class="sub">Routines, repères, plan mental clair et reproductible.</p>
+      </article>
+      <article class="card">
+        <h3>3. Protocoles</h3>
+        <p class="sub">Pression, focus, précision, après-erreur, activation.</p>
+      </article>
+      <article class="card">
+        <h3>4. Exécution</h3>
+        <p class="sub">Application en contexte réel : entraînement & compétition.</p>
+      </article>
+    </div>
+
+    <style>
+      @media (max-width:980px){
+        #methode .cards{grid-template-columns:1fr !important;}
+      }
+    </style>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="container" id="contact">
+    <div class="divider"></div>
+    <div class="panel" style="padding:22px;">
+      <h2>Appel stratégique</h2>
+      <p class="sub">20 minutes • sans engagement • diagnostic rapide • on décide ensuite si on structure.</p>
+
+      <div class="heroActions">
+        <!-- Remplace par ton lien Calendly ou ton mail -->
+        <a class="btn primary" href="#">Réserver l’appel</a>
+        <a class="btn" href="#top">Revenir en haut</a>
+      </div>
+
+      <p class="sub" style="margin-top:14px;">
+        <b>Jérémy BOUVIER – Préparateur Mental</b><br/>
+        <span style="color:rgba(243,246,255,.68)">Stratège en Performance • La performance se structure.</span>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container foot">
+    <div>
+      <b style="color:rgba(243,246,255,.85)">Jérémy BOUVIER – Préparateur Mental</b><br/>
+      <span>Stratège en Performance • La performance se structure.</span>
+    </div>
+    <div>
+      <span>© <script>document.write(new Date().getFullYear())</script> • Tous droits réservés</span>
+    </div>
+  </div>
 </footer>
 
 </body>
