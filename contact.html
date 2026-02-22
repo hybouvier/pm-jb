@@ -1,20 +1,96 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Contact | Jérémy Bouvier</title>
-<meta name="description" content="Contact préparateur mental sport auto et sport individuel.">
-<link rel="canonical" href="https://pm-jb.com/contact.html">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact | Jérémy Bouvier – Préparateur Mental</title>
+  <meta name="description" content="Contacte Jérémy Bouvier, préparateur mental sport auto et sport individuel. Réserve un appel stratégique gratuit via le calendrier en ligne.">
+  <link rel="canonical" href="https://pm-jb.com/contact.html" />
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body>
 
-<body style="font-family: Arial; max-width:1000px; margin:auto; padding:40px;">
+<header class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-badge" aria-hidden="true"><span>JB</span></div>
+        <div><div>Jérémy Bouvier</div><small>Préparateur mental • France entière</small></div>
+      </a>
 
-<h1>Contact</h1>
+      <nav class="nav-links" aria-label="Navigation">
+        <a data-nav href="preparateur-mental-sport-auto.html">Sport auto</a>
+        <a data-nav href="preparateur-mental-sport-individuel.html">Sport individuel</a>
+        <a data-nav href="coaching-mental-haut-niveau.html">Haut niveau</a>
+        <a data-nav href="methode-hybou.html">Méthode HyBou</a>
+        <a data-nav href="a-propos.html">À propos</a>
+        <a data-nav href="contact.html">Contact</a>
+      </nav>
 
-<p>Téléphone : 06 61 96 26 53</p>
-<p>Email : hybouvier@gmail.com</p>
+      <div class="nav-cta">
+        <a class="btn btn-ghost" href="contact.html">Contact</a>
+        <a class="btn btn-primary" href="https://app.lemcal.com/@pm-jb/30-minutes"><strong>Appel stratégique</strong></a>
+        <button class="btn burger" data-burger type="button" aria-label="Menu">☰</button>
+      </div>
+    </div>
 
-<a href="https://app.lemcal.com/@pm-jb/30-minutes">Réserver un appel stratégique</a>
+    <div class="mobile" data-mobile data-open="0" style="display:none">
+      <a data-nav href="preparateur-mental-sport-auto.html">Sport auto</a>
+      <a data-nav href="preparateur-mental-sport-individuel.html">Sport individuel</a>
+      <a data-nav href="coaching-mental-haut-niveau.html">Haut niveau</a>
+      <a data-nav href="methode-hybou.html">Méthode HyBou</a>
+      <a data-nav href="a-propos.html">À propos</a>
+      <a data-nav href="contact.html">Contact</a>
+    </div>
+  </div>
+</header>
 
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="card hero-card">
+        <span class="kicker">Contact • Réservation • France entière</span>
+        <h1>Contact</h1>
+        <p>Pour avancer vite : réserve un appel stratégique. Sinon, contacte-moi directement.</p>
+
+        <div class="grid-2" style="margin-top:16px">
+          <div class="card feature">
+            <h3>Réserver un appel</h3>
+            <p>Choisis ton créneau sur mon calendrier :</p>
+            <div class="hero-actions" style="margin-top:12px">
+              <a class="btn btn-primary" href="https://app.lemcal.com/@pm-jb/30-minutes"><strong>Ouvrir le calendrier</strong></a>
+            </div>
+          </div>
+
+          <div class="card feature">
+            <h3>Contact direct</h3>
+            <ul class="list">
+              <li><strong style="color:var(--text)">Téléphone :</strong> 06 61 96 26 53</li>
+              <li><strong style="color:var(--text)">Email :</strong> hybouvier@gmail.com</li>
+              <li><strong style="color:var(--text)">Format :</strong> visio (France entière) / présentiel selon besoin</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="notice" style="margin-top:16px">
+          <strong style="color:var(--gold)">Conseil :</strong> si tu me contactes par email, indique ton sport, ton niveau, tes objectifs et ton prochain enjeu (date).
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="cols">
+      <div class="small">© <span id="year"></span> pm-jb.com — Tous droits réservés.</div>
+      <div class="small" style="text-align:right"><a href="index.html">Accueil</a> • <a href="methode-hybou.html">Méthode HyBou</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="script.js"></script>
 </body>
 </html>
