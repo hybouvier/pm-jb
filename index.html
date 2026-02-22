@@ -1,295 +1,258 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta name="theme-color" content="#0b0f17" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jérémy Bouvier — Préparateur Mental | Sport Auto & Sport Individuel</title>
+  <meta name="description" content="Préparation mentale haut niveau : sport automobile, sports individuels, gestion de la pression, focus, routine, confiance. Méthode HyBou. Appel stratégique gratuit." />
+  <link rel="canonical" href="https://pm-jb.com/" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
 
-<title>Jérémy BOUVIER – Préparateur Mental | Sport individuel & sport auto</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mobiles.css" />
 
-<meta name="description" content="Préparateur mental sport individuel & sport auto. Confiance, focus, gestion pression, routines de performance. France entière. Appel stratégique gratuit." />
-<link rel="canonical" href="https://pm-jb.com/" />
-
-<link rel="icon" href="logo.png" type="image/png">
-
-<style>
-:root{
---bg:#070b12;
---bg2:#0b1020;
---card:#0b1222cc;
---stroke:#ffffff1a;
---text:#eaf0ff;
---muted:#b7c2d9;
---radius:22px;
---grad:linear-gradient(90deg,#8fb3ff,#7fe7c6);
-}
-
-*{box-sizing:border-box}
-body{
-margin:0;
-font-family:system-ui,-apple-system,Segoe UI,Roboto;
-background:linear-gradient(180deg,var(--bg),var(--bg2));
-color:var(--text);
-}
-
-a{text-decoration:none;color:inherit}
-.container{width:min(1140px,92vw);margin:0 auto}
-
-/* NAV */
-.topbar{
-position:sticky;
-top:0;
-background:#070b12e6;
-backdrop-filter:blur(10px);
-border-bottom:1px solid #ffffff12;
-z-index:50;
-}
-.nav{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:14px 0;
-}
-
-.brand{
-display:flex;
-align-items:center;
-gap:12px;
-}
-.brand img{
-width:50px;
-height:50px;
-object-fit:contain;
-}
-.brand strong{
-font-size:14px;
-}
-.menu{
-display:flex;
-gap:16px;
-}
-.menu a{
-font-size:13px;
-color:var(--muted);
-}
-.menu a:hover{color:white}
-
-.btn{
-padding:10px 14px;
-border-radius:14px;
-border:1px solid var(--stroke);
-background:#ffffff08;
-font-size:13px;
-}
-.btn.primary{
-background:var(--grad);
-border:none;
-color:#000;
-font-weight:700;
-}
-
-/* HERO */
-.hero{
-padding:60px 0;
-}
-.hero h1{
-font-size:clamp(36px,5vw,60px);
-line-height:1.05;
-margin-bottom:20px;
-}
-.baseline{
-color:var(--muted);
-font-size:18px;
-max-width:700px;
-line-height:1.5;
-}
-
-/* SECTION */
-section{
-padding:60px 0;
-border-top:1px solid #ffffff10;
-}
-h2{
-font-size:32px;
-margin-bottom:20px;
-}
-.card{
-background:#0b1222;
-border-radius:var(--radius);
-padding:30px;
-border:1px solid #ffffff10;
-margin-bottom:20px;
-}
-.price{
-font-size:34px;
-font-weight:800;
-margin:10px 0;
-}
-ul{
-color:var(--muted);
-line-height:1.6;
-}
-
-.grid3{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-}
-.grid2{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-}
-
-footer{
-padding:40px 0;
-border-top:1px solid #ffffff15;
-color:#8f9db9;
-font-size:13px;
-}
-
-@media(max-width:900px){
-.grid3,.grid2{grid-template-columns:1fr}
-.menu{display:none}
-}
-</style>
+  <meta property="og:title" content="Jérémy Bouvier — Préparateur Mental" />
+  <meta property="og:description" content="Préparation mentale haut niveau : sport auto & sport individuel. Méthode HyBou. Appel stratégique gratuit." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pm-jb.com/" />
 </head>
 
 <body>
+  <!-- Background blobs -->
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb o1"></span>
+    <span class="orb o2"></span>
+    <span class="orb o3"></span>
+  </div>
 
-<header class="topbar">
-<div class="container nav">
-<div class="brand">
-<img src="logo.png" alt="Logo HyBou">
-<div>
-<strong>Jérémy BOUVIER</strong><br>
-<span style="font-size:12px;color:#8f9db9">Préparateur Mental</span>
-</div>
-</div>
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="index.html" aria-label="Accueil">
+        <img src="logo.png" class="brand__logo" alt="Logo HyBou" />
+        <div class="brand__text">
+          <div class="brand__name">Jérémy BOUVIER</div>
+          <div class="brand__role">Préparateur Mental</div>
+        </div>
+      </a>
 
-<nav class="menu">
-<a href="#methode">Méthode</a>
-<a href="#offres">Offres & Tarifs</a>
-<a href="#sport-individuel">Sport individuel</a>
-<a href="#sport-auto">Sport auto</a>
-<a href="#contact">Contact</a>
-</nav>
+      <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" data-burger>
+        <span></span><span></span><span></span>
+      </button>
 
-<a class="btn primary" href="#contact">Appel stratégique GRATUIT</a>
-</div>
-</header>
+      <nav class="nav" data-nav>
+        <a class="nav__link is-active" href="index.html">Accueil</a>
+        <a class="nav__link" href="methode-hybou.html">Méthode</a>
+        <a class="nav__link" href="coaching-mental-haut-niveau.html">Haut niveau</a>
+        <a class="nav__link" href="preparateur-mental-sport-individuel.html">Sport individuel</a>
+        <a class="nav__link" href="preparateur-mental-sport-auto.html">Sport auto</a>
+        <a class="nav__link" href="a-propos.html">À propos</a>
+        <a class="nav__link nav__cta" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<main class="hero container">
-<h1>La différence entre un bon sportif et un sportif performant, c’est le mental.</h1>
-<p class="baseline">
-Préparation mentale haut niveau pour sport individuel (tennis, boxe, tir, golf, musculation, crossfit…) et sport auto.
-Objectif : confiance stable, focus durable, gestion pression et routines de performance.
-</p>
-</main>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__content">
+          <div class="pill">Haut niveau • Focus • Routine • Pression</div>
 
-<section id="offres">
-<div class="container">
-<h2>Offres & Tarifs</h2>
+          <h1 class="hero__title revealUp">
+            La différence entre un bon sportif et un sportif performant,<br />
+            <span class="grad">c’est le mental.</span>
+          </h1>
 
-<div class="card">
-<h3>Présence Stratégique Compétition</h3>
-<div class="grid2">
-<div>
-<ul>
-<li>Briefing mental pré-épreuve</li>
-<li>Ajustement activation</li>
-<li>Gestion pression temps réel</li>
-<li>Recalibrage entre manches</li>
-<li>Débrief immédiat</li>
-</ul>
-</div>
-<div>
-<ul>
-<li><strong>700€</strong> / 1 jour + VHR</li>
-<li><strong>1200€</strong> / 2 jours + VHR</li>
-<li><strong>1650€</strong> / 3 jours + VHR</li>
-<li><strong>1950€</strong> / 4 jours + VHR</li>
-</ul>
-<p style="color:#8f9db9">Cas particulier : tarif sur demande.</p>
-</div>
-</div>
-</div>
+          <p class="hero__lead revealUp d1">
+            Je t’aide à structurer ton mental comme ton entraînement :
+            clarté, régularité, confiance, et exécution sous pression.
+          </p>
 
-<h2>Programmes</h2>
+          <div class="hero__actions revealUp d2">
+            <a class="btn btn--primary" href="contact.html">Appel Stratégique GRATUIT</a>
+            <a class="btn btn--ghost" href="methode-hybou.html">Découvrir la Méthode HyBou</a>
+          </div>
 
-<div class="grid3">
+          <div class="hero__stats revealUp d3">
+            <div class="stat">
+              <div class="stat__k">Sport auto</div>
+              <div class="stat__v">performance & régularité</div>
+            </div>
+            <div class="stat">
+              <div class="stat__k">Sport individuel</div>
+              <div class="stat__v">pression • focus • confiance</div>
+            </div>
+            <div class="stat">
+              <div class="stat__k">Formats</div>
+              <div class="stat__v">séances • programmes • présence</div>
+            </div>
+          </div>
+        </div>
 
-<div class="card">
-<h3>Séance Individuelle</h3>
-<div class="price">140€</div>
-<ul>
-<li>Analyse + ajustement</li>
-<li>Pression / blocage</li>
-<li>Mini plan d'action</li>
-</ul>
-</div>
+        <aside class="hero__card glass revealUp d2">
+          <h2 class="card__title">Par où commencer ?</h2>
+          <p class="muted">
+            On clarifie ton objectif, ton contexte (niveau, échéances, contraintes),
+            puis je te donne un plan d’action simple et mesurable.
+          </p>
+          <div class="divider"></div>
+          <ul class="check">
+            <li>Diagnostic mental & priorités</li>
+            <li>Routine & protocoles compétition</li>
+            <li>Gestion pression / erreurs / focus</li>
+          </ul>
+          <div class="card__actions">
+            <a class="btn btn--primary w100" href="contact.html">Réserver un appel</a>
+            <a class="btn btn--ghost w100" href="offres-tarifs.html">Voir les offres & tarifs</a>
+          </div>
+        </aside>
+      </div>
+    </section>
 
-<div class="card">
-<h3>Fondations Mentales (5 séances)</h3>
-<div class="price">690€</div>
-<ul>
-<li>Routines</li>
-<li>Confiance</li>
-<li>Plan personnalisé</li>
-</ul>
-</div>
+    <!-- SERVICES -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="section__title">Spécialisations</h2>
+          <p class="section__sub">Deux univers, une même exigence : exécuter quand ça compte.</p>
+        </div>
 
-<div class="card">
-<h3>Performance Saison</h3>
-<div class="price">1200€</div>
-<ul>
-<li>8 séances individuelles</li>
-<li>Briefings / débriefings</li>
-<li>Plan mental compétition</li>
-<li>Évaluation avant / après</li>
-</ul>
-</div>
+        <div class="grid3">
+          <article class="glass card">
+            <h3>Sport Individuel</h3>
+            <p class="muted">Tennis, tir, boxe, sport de combat, musculation…</p>
+            <ul class="bullets">
+              <li>Gestion de la pression</li>
+              <li>Confiance & stabilité</li>
+              <li>Focus & routines</li>
+            </ul>
+            <a class="link" href="preparateur-mental-sport-individuel.html">Voir la page →</a>
+          </article>
 
-</div>
-</div>
-</section>
+          <article class="glass card">
+            <h3>Sport Automobile</h3>
+            <p class="muted">Endurance, sprint, qualifications, erreurs & relance.</p>
+            <ul class="bullets">
+              <li>Protocoles pré-qualif / course</li>
+              <li>Recalibrage entre runs</li>
+              <li>Débrief & stratégie mentale</li>
+            </ul>
+            <a class="link" href="preparateur-mental-sport-auto.html">Voir la page →</a>
+          </article>
 
-<section id="sport-individuel">
-<div class="container">
-<h2>Préparation mentale sport individuel</h2>
-<p style="color:#b7c2d9;max-width:900px;line-height:1.7">
-En sport individuel, la performance dépend directement de ta stabilité mentale.
-La préparation mentale permet de stabiliser la confiance, améliorer le focus,
-accélérer le retour après erreur et performer sous pression.
-</p>
-</div>
-</section>
+          <article class="glass card">
+            <h3>Haut Niveau</h3>
+            <p class="muted">Cadre, méthode, intensité. On structure, on mesure, on ajuste.</p>
+            <ul class="bullets">
+              <li>Plan mental compétition</li>
+              <li>Évaluation avant / après</li>
+              <li>Accompagnement saison</li>
+            </ul>
+            <a class="link" href="coaching-mental-haut-niveau.html">Voir la page →</a>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section id="sport-auto">
-<div class="container">
-<h2>Sport Automobile</h2>
-<p style="color:#b7c2d9;max-width:900px;line-height:1.7">
-Gestion pression, rythme, erreurs, prise de décision rapide.
-Présence compétition possible selon calendrier.
-</p>
-</div>
-</section>
+    <!-- OFFRES / TARIFS (teaser) -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="section__title">Offres & Tarifs</h2>
+          <p class="section__sub">Tarifs clairs + options “sur demande” pour les besoins spécifiques.</p>
+        </div>
 
-<section id="contact">
-<div class="container">
-<h2>Contact</h2>
-<div class="card">
-Email : <a href="mailto:hybouvier@gmail.com">hybouvier@gmail.com</a><br>
-Téléphone : 06 61 96 26 53
-</div>
-</div>
-</section>
+        <div class="grid2">
+          <article class="glass card">
+            <h3>Programmes (visio / présentiel)</h3>
+            <ul class="bullets">
+              <li>Séance individuelle : <b>140€</b></li>
+              <li>Fondations mentales (5 séances) : <b>690€</b></li>
+              <li>Performance saison : <b>1200€</b></li>
+              <li>Cas particulier : <b>tarif sur demande</b></li>
+            </ul>
+            <a class="btn btn--ghost w100" href="offres-tarifs.html">Voir tous les détails</a>
+          </article>
 
-<footer>
-<div class="container">
-Jérémy BOUVIER – Préparateur Mental • France entière
-</div>
-</footer>
+          <article class="glass card">
+            <h3>Présence stratégique compétition</h3>
+            <p class="muted">Briefing, recalibrage, gestion de l’erreur, débrief immédiat.</p>
+            <ul class="bullets">
+              <li>1 jour : <b>700€</b> + VHR</li>
+              <li>2 jours : <b>1200€</b> + VHR</li>
+              <li>3 jours : <b>1650€</b> + VHR</li>
+              <li>4 jours : <b>1950€</b> + VHR</li>
+              <li>Cas particulier : <b>tarif sur demande</b></li>
+            </ul>
+            <a class="btn btn--primary w100" href="contact.html">Demander une disponibilité</a>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <!-- FAQ -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="section__title">FAQ</h2>
+          <p class="section__sub">Réponses rapides avant de démarrer.</p>
+        </div>
+
+        <div class="faq">
+          <details class="glass faq__item">
+            <summary>Ça fonctionne en visio ?</summary>
+            <p>Oui. La visio est très efficace : routines, scripts, protocoles, débrief et suivi.</p>
+          </details>
+          <details class="glass faq__item">
+            <summary>Combien de séances pour voir un changement ?</summary>
+            <p>Souvent dès 1 à 2 séances tu as des ajustements concrets. Les programmes structurent la régularité.</p>
+          </details>
+          <details class="glass faq__item">
+            <summary>Tu fais aussi du “sur demande” ?</summary>
+            <p>Oui : contraintes pro, planning compétition, objectifs spécifiques, présence sur événement…</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="wrap cta__inner glass">
+        <div>
+          <h2>Prêt à passer un cap ?</h2>
+          <p class="muted">Un appel gratuit pour poser le cadre et repartir avec un plan clair.</p>
+        </div>
+        <div class="cta__actions">
+          <a class="btn btn--primary" href="contact.html">Appel Stratégique GRATUIT</a>
+          <a class="btn btn--ghost" href="offres-tarifs.html">Offres & Tarifs</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div class="footer__brand">
+        <img src="logo.png" alt="Logo HyBou" class="footer__logo" />
+        <div>
+          <div class="footer__name">Jérémy BOUVIER</div>
+          <div class="footer__muted">Préparateur Mental • Méthode HyBou</div>
+        </div>
+      </div>
+      <div class="footer__links">
+        <a href="methode-hybou.html">Méthode</a>
+        <a href="offres-tarifs.html">Offres & Tarifs</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer__copy">
+        <span>© <span id="year"></span> pm-jb.com</span>
+        <span class="dot">•</span>
+        <a href="sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
