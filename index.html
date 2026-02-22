@@ -1,353 +1,1049 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Préparateur Mental Sport Auto & Sport Individuel | Jérémy Bouvier</title>
-  <meta name="description" content="Préparateur mental spécialisé sport automobile et sports individuels. Gestion du stress, confiance, concentration, performance en compétition. Méthode HyBou. France entière en visio." />
+  <meta name="theme-color" content="#0b0f17" />
+
+  <title>Jérémy BOUVIER – Préparateur Mental | Sport individuel & sport auto | France</title>
+  <meta name="description" content="Préparateur mental (France entière) – sport individuel & sport auto. Confiance, focus, gestion de la pression, routines de performance. Appel stratégique gratuit + programmes et présence compétition." />
   <link rel="canonical" href="https://pm-jb.com/" />
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Jérémy BOUVIER – Préparateur Mental | Sport individuel & sport auto" />
+  <meta property="og:description" content="Confiance, focus, gestion de la pression, routines de performance. Appel stratégique gratuit." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pm-jb.com/" />
+  <meta property="og:image" content="https://pm-jb.com/photo.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jérémy BOUVIER – Préparateur Mental" />
+  <meta name="twitter:description" content="Sport individuel & sport auto – France entière. Appel stratégique gratuit." />
+  <meta name="twitter:image" content="https://pm-jb.com/photo.png" />
+
+  <!-- Performance -->
+  <link rel="preload" as="image" href="photo.png" />
+
+  <!-- Styles -->
+  <style>
+    :root{
+      --bg:#070b12;
+      --bg2:#0b1020;
+      --card:#0b1222cc;
+      --card2:#0b1222;
+      --stroke:#ffffff1a;
+      --stroke2:#ffffff14;
+      --text:#eaf0ff;
+      --muted:#b7c2d9;
+      --muted2:#98a6c8;
+      --shadow: 0 30px 80px rgba(0,0,0,.55);
+      --radius: 22px;
+      --radius2: 18px;
+      --grad: linear-gradient(90deg, #8fb3ff, #7fe7c6);
+      --grad2: radial-gradient(1200px 600px at 20% 20%, rgba(143,179,255,.25), transparent 60%),
+               radial-gradient(900px 500px at 80% 30%, rgba(127,231,198,.18), transparent 55%),
+               radial-gradient(900px 500px at 40% 90%, rgba(143,179,255,.12), transparent 55%);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        var(--grad2),
+        radial-gradient(900px 500px at 60% 10%, rgba(255,255,255,.05), transparent 55%),
+        radial-gradient(1200px 700px at 50% 120%, rgba(255,255,255,.03), transparent 65%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+      color:var(--text);
+      overflow-x:hidden;
+    }
+
+    a{color:inherit; text-decoration:none}
+    img{max-width:100%; height:auto}
+
+    .container{width:min(1140px, 92vw); margin:0 auto}
+
+    /* Topbar */
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(180deg, rgba(7,11,18,.78), rgba(7,11,18,.45));
+      border-bottom: 1px solid var(--stroke2);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding: 14px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width: 220px;
+    }
+    .brand img{
+      width:44px; height:44px; border-radius:14px;
+      border:1px solid var(--stroke);
+      box-shadow: 0 10px 25px rgba(0,0,0,.35);
+      object-fit:cover;
+    }
+    .brand .t{
+      display:flex; flex-direction:column; line-height:1.1;
+    }
+    .brand .t strong{font-size:14px; letter-spacing:.2px}
+    .brand .t span{font-size:12px; color:var(--muted2)}
+    .menu{
+      display:flex; align-items:center; gap:14px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .menu a{
+      font-size:13px;
+      color:var(--muted);
+      padding: 8px 10px;
+      border-radius: 12px;
+      border:1px solid transparent;
+      transition:.2s ease;
+    }
+    .menu a:hover{
+      color:var(--text);
+      border-color: var(--stroke);
+      background: rgba(255,255,255,.04);
+    }
+    .cta{
+      display:flex; gap:10px; align-items:center;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding: 11px 14px;
+      border-radius: 16px;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.04);
+      color:var(--text);
+      font-weight:650;
+      font-size:13px;
+      transition:.2s ease;
+      box-shadow: 0 18px 40px rgba(0,0,0,.25);
+      white-space:nowrap;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.06)}
+    .btn.primary{
+      border-color: transparent;
+      background: var(--grad);
+      color:#08101a;
+      box-shadow: 0 20px 60px rgba(143,179,255,.18);
+    }
+    .btn.primary:hover{filter:saturate(1.05); transform: translateY(-1px)}
+
+    /* Hero */
+    .hero{
+      padding: 44px 0 12px;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    .heroCard{
+      position:relative;
+      border-radius: var(--radius);
+      border: 1px solid var(--stroke2);
+      background: linear-gradient(180deg, rgba(11,18,34,.75), rgba(11,18,34,.45));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      padding: 34px 34px 28px;
+      min-height: 360px;
+    }
+    .heroCard:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(700px 300px at 15% 15%, rgba(143,179,255,.20), transparent 60%),
+                  radial-gradient(700px 300px at 85% 25%, rgba(127,231,198,.14), transparent 55%);
+      pointer-events:none;
+    }
+    .heroInner{position:relative}
+    h1{
+      margin:0 0 10px;
+      font-size: clamp(38px, 4.8vw, 64px);
+      letter-spacing:-1.2px;
+      line-height:1.02;
+    }
+    .baseline{
+      margin: 0 0 14px;
+      font-size: clamp(16px, 2vw, 20px);
+      color: var(--muted);
+      line-height:1.45;
+      max-width: 58ch;
+    }
+    .chips{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin: 18px 0 22px;
+    }
+    .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      font-size:12px;
+    }
+    .heroActions{display:flex; gap:12px; flex-wrap:wrap; margin-top: 14px}
+    .note{
+      margin-top: 14px;
+      color: var(--muted2);
+      font-size: 12.5px;
+    }
+
+    .sideCard{
+      border-radius: var(--radius);
+      border: 1px solid var(--stroke2);
+      background: linear-gradient(180deg, rgba(11,18,34,.65), rgba(11,18,34,.35));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      padding: 22px;
+      position:relative;
+      min-height: 360px;
+    }
+    .sideCard:before{
+      content:"";
+      position:absolute; inset:-1px;
+      background: radial-gradient(500px 260px at 40% 0%, rgba(255,255,255,.06), transparent 60%);
+      pointer-events:none;
+    }
+    .sideInner{position:relative}
+    .sideTitle{
+      display:flex; align-items:center; justify-content:space-between;
+      margin-bottom:10px;
+    }
+    .sideTitle h3{margin:0; font-size:16px; letter-spacing:.2px}
+    .badge{
+      font-size:11px; color: var(--muted);
+      border:1px solid var(--stroke);
+      padding:6px 10px; border-radius:999px;
+      background: rgba(255,255,255,.03);
+    }
+    .profile{
+      display:flex; gap:12px; align-items:center; margin-top:14px;
+      padding: 12px;
+      border-radius: 18px;
+      border:1px solid var(--stroke2);
+      background: rgba(0,0,0,.18);
+    }
+    .profile img{
+      width:56px; height:56px; border-radius:18px;
+      object-fit:cover;
+      border:1px solid var(--stroke);
+    }
+    .profile strong{display:block; font-size:14px}
+    .profile span{display:block; font-size:12px; color:var(--muted2); margin-top:2px}
+    .list{
+      margin:14px 0 0;
+      padding:0 0 0 18px;
+      color: var(--muted);
+    }
+    .list li{margin:8px 0}
+
+    /* Sections */
+    section{padding: 28px 0}
+    .sectionHead{
+      margin: 0 0 12px;
+      display:flex; justify-content:space-between; align-items:flex-end; gap:14px;
+      border-top: 1px solid rgba(255,255,255,.10);
+      padding-top: 22px;
+    }
+    .sectionHead h2{
+      margin:0;
+      font-size: 30px;
+      letter-spacing:-.6px;
+    }
+    .sectionHead p{margin:0; color:var(--muted); max-width: 70ch}
+
+    .grid2{display:grid; grid-template-columns: 1fr 1fr; gap:18px}
+    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:18px}
+
+    .card{
+      border-radius: var(--radius);
+      border: 1px solid var(--stroke2);
+      background: linear-gradient(180deg, rgba(11,18,34,.62), rgba(11,18,34,.32));
+      box-shadow: var(--shadow);
+      padding: 22px;
+      position:relative;
+      overflow:hidden;
+    }
+    .card:before{
+      content:"";
+      position:absolute; inset:-1px;
+      background: radial-gradient(700px 260px at 25% 0%, rgba(143,179,255,.10), transparent 60%),
+                  radial-gradient(700px 260px at 85% 15%, rgba(127,231,198,.08), transparent 55%);
+      pointer-events:none;
+    }
+    .card > *{position:relative}
+    .card h3{margin:0 0 10px; font-size:22px}
+    .sub{color:var(--muted); margin:0 0 14px}
+    .kpis{
+      display:flex; flex-wrap:wrap; gap:10px; margin-top:12px
+    }
+    .kpi{
+      border-radius: 16px;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.03);
+      padding: 10px 12px;
+      min-width: 150px;
+    }
+    .kpi strong{display:block; font-size:14px}
+    .kpi span{display:block; font-size:12px; color:var(--muted2); margin-top:2px}
+
+    /* Pricing blocks (keep your design) */
+    .pricingGrid{display:grid; grid-template-columns: 1.1fr .9fr; gap:18px; align-items:stretch}
+    .pricingCard{border-radius: var(--radius); border:1px solid var(--stroke2); background: rgba(0,0,0,.18); padding: 22px; box-shadow: var(--shadow)}
+    .pricingCard h3{margin:0 0 10px; font-size:22px}
+    .pricingCard ul{margin: 0; padding-left:18px; color:var(--muted)}
+    .pricingCard li{margin: 8px 0}
+    .pricingCard .btnRow{margin-top: 16px}
+    .pricingCard .priceList{margin: 0; padding-left: 18px; color: var(--text)}
+    .pricingCard .priceList li{margin: 10px 0}
+    .pricingCard .fine{margin-top:12px; color: var(--muted); font-size: 13px; line-height:1.4}
+
+    .programmes{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:18px;
+      margin-top: 12px;
+    }
+    .pack{
+      border-radius: var(--radius);
+      border:1px solid var(--stroke2);
+      background: linear-gradient(180deg, rgba(11,18,34,.62), rgba(11,18,34,.28));
+      box-shadow: var(--shadow);
+      padding: 22px;
+      position:relative;
+      overflow:hidden;
+    }
+    .pack:before{
+      content:"";
+      position:absolute; inset:-1px;
+      background: radial-gradient(800px 340px at 30% 0%, rgba(143,179,255,.10), transparent 60%),
+                  radial-gradient(800px 340px at 90% 10%, rgba(127,231,198,.08), transparent 55%);
+      pointer-events:none;
+    }
+    .pack > *{position:relative}
+    .tag{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      font-size: 12px;
+      float:right;
+    }
+    .pack h3{margin:0 0 6px; font-size: 22px}
+    .price{font-size: 34px; font-weight: 800; letter-spacing:-.6px; margin: 10px 0 12px}
+    .pack ul{margin:0; padding-left:18px; color: var(--muted)}
+    .pack li{margin: 8px 0}
+    .pack .btnRow{margin-top: 16px}
+    .pack.featured{
+      border-color: rgba(143,179,255,.22);
+      background: linear-gradient(180deg, rgba(11,18,34,.70), rgba(11,18,34,.30));
+    }
+    .pack.featured:after{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(135deg, rgba(143,179,255,.18), transparent 55%);
+      pointer-events:none;
+      opacity:.55;
+    }
+
+    /* SEO long content (kept nice) */
+    .seoBlock{
+      border-radius: var(--radius);
+      border:1px solid var(--stroke2);
+      background: rgba(0,0,0,.16);
+      box-shadow: var(--shadow);
+      padding: 22px;
+      line-height:1.7;
+      color: var(--muted);
+    }
+    .seoBlock h3{color:var(--text); margin: 10px 0 8px; font-size: 20px}
+    .seoBlock h4{color:var(--text); margin: 14px 0 6px; font-size: 16px}
+    .seoBlock p{margin: 10px 0}
+    .seoCols{display:grid; grid-template-columns: 1fr 1fr; gap:18px}
+    .mini{
+      border-radius: 16px;
+      border:1px solid var(--stroke2);
+      background: rgba(255,255,255,.03);
+      padding: 14px;
+    }
+
+    /* FAQ */
+    .faq{margin-top: 12px}
+    details{
+      border-radius: 18px;
+      border: 1px solid var(--stroke2);
+      background: rgba(255,255,255,.03);
+      padding: 14px 16px;
+      margin: 10px 0;
+      box-shadow: 0 18px 45px rgba(0,0,0,.25);
+    }
+    summary{
+      cursor:pointer;
+      font-weight: 750;
+      color: var(--text);
+      list-style:none;
+    }
+    summary::-webkit-details-marker{display:none}
+    details p{margin:10px 0 0; color: var(--muted)}
+    .footer{
+      padding: 30px 0 40px;
+      border-top: 1px solid rgba(255,255,255,.10);
+      color: var(--muted2);
+      font-size: 12.5px;
+    }
+    .footerGrid{
+      display:grid; grid-template-columns: 1.2fr .8fr; gap:18px; align-items:start;
+    }
+    .footer a{color: var(--muted); text-decoration:underline; text-underline-offset:2px}
+
+    /* Small helpers */
+    .muted{color:var(--muted)}
+    .sep{height:1px; background: rgba(255,255,255,.10); margin: 16px 0}
+    .hideDesktop{display:none}
+
+    /* Anim */
+    .reveal{
+      opacity:0;
+      transform: translateY(14px);
+      transition: .7s ease;
+    }
+    .reveal.show{opacity:1; transform: translateY(0)}
+  </style>
+
+  <!-- Mobile overrides (separate file you asked) -->
+  <link rel="stylesheet" href="mobiles.css" />
 </head>
+
 <body>
 
-<header class="nav">
-  <div class="container">
-    <div class="nav-inner">
-      <a class="brand" href="index.html">
-        <div class="brand-badge" aria-hidden="true"><span>JB</span></div>
-        <div>
-          <div>Jérémy Bouvier</div>
-          <small>Préparateur mental • France entière</small>
-        </div>
-      </a>
-
-      <nav class="nav-links" aria-label="Navigation">
-        <a data-nav href="preparateur-mental-sport-auto.html">Sport auto</a>
-        <a data-nav href="preparateur-mental-sport-individuel.html">Sport individuel</a>
-        <a data-nav href="coaching-mental-haut-niveau.html">Haut niveau</a>
-        <a data-nav href="methode-hybou.html">Méthode HyBou</a>
-        <a href="#offres">Offres</a>
-        <a data-nav href="a-propos.html">À propos</a>
-        <a data-nav href="contact.html">Contact</a>
-      </nav>
-
-      <div class="nav-cta">
-        <a class="btn btn-ghost" href="contact.html">Contact</a>
-        <a class="btn btn-primary" href="https://app.lemcal.com/@pm-jb/30-minutes">
-          <strong>Appel stratégique</strong>
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="#top" aria-label="Retour accueil">
+          <img src="photo.png" alt="Photo Jérémy BOUVIER" />
+          <div class="t">
+            <strong>Jérémy BOUVIER</strong>
+            <span>Préparateur Mental • Sport individuel & sport auto</span>
+          </div>
         </a>
-        <button class="btn burger" data-burger type="button" aria-label="Menu">☰</button>
+
+        <nav class="menu" aria-label="Menu principal">
+          <a href="#methode">Méthode</a>
+          <a href="#offres">Offres & Tarifs</a>
+          <a href="#sport-individuel">Sport individuel</a>
+          <a href="#sport-auto">Sport auto</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="cta">
+          <a class="btn" href="#contact">Message</a>
+          <a class="btn primary" href="#contact">Appel stratégique GRATUIT</a>
+        </div>
       </div>
     </div>
+  </header>
 
-    <div class="mobile" data-mobile data-open="0" style="display:none">
-      <a data-nav href="preparateur-mental-sport-auto.html">Sport auto</a>
-      <a data-nav href="preparateur-mental-sport-individuel.html">Sport individuel</a>
-      <a data-nav href="coaching-mental-haut-niveau.html">Haut niveau</a>
-      <a data-nav href="methode-hybou.html">Méthode HyBou</a>
-      <a href="#offres">Offres</a>
-      <a data-nav href="a-propos.html">À propos</a>
-      <a data-nav href="contact.html">Contact</a>
-    </div>
-  </div>
-</header>
-
-<main>
-  <!-- HERO -->
-  <section class="hero">
+  <!-- Hero -->
+  <main id="top" class="hero">
     <div class="container">
-      <div class="hero-grid">
-        <div class="card hero-card">
-          <span class="kicker">Performance • Concentration • Régularité</span>
-          <h1>Préparation mentale haut niveau pour gagner quand ça compte.</h1>
-          <p>
-            J’accompagne des <strong>pilotes</strong> et des <strong>sportifs individuels</strong> à transformer
-            leur mental en avantage compétitif : gestion de la pression, confiance stable, exécution sous stress,
-            routines de compétition, relance après erreur.
-          </p>
+      <div class="heroGrid">
+        <div class="heroCard reveal">
+          <div class="heroInner">
+            <h1>La différence entre un bon sportif et un sportif performant, c’est le mental.</h1>
+            <p class="baseline">
+              Préparation mentale haut niveau pour <strong>sport individuel</strong> (tennis, boxe, tir, golf, crossfit, musculation, etc.)
+              et <strong>sport auto</strong>. Objectif : <strong>stabilité</strong>, <strong>confiance</strong>, <strong>focus</strong>, <strong>gestion de la pression</strong> et <strong>routine de performance</strong>.
+            </p>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://app.lemcal.com/@pm-jb/30-minutes"><strong>Réserver un appel stratégique</strong></a>
-            <a class="btn" href="preparateur-mental-sport-auto.html">Voir l’accompagnement sport auto</a>
-          </div>
-
-          <div class="meta">
-            <span>✅ Visio France entière</span>
-            <span>✅ Routines personnalisées</span>
-            <span>✅ Méthode HyBou</span>
-          </div>
-
-          <hr class="hr"/>
-
-          <div class="split">
-            <div class="notice">
-              <strong style="color:var(--gold)">Ce que tu obtiens :</strong><br/>
-              un plan clair, des outils concrets, et un suivi orienté compétition (pas du blabla).
+            <div class="chips" aria-label="Points clés">
+              <span class="chip">France entière</span>
+              <span class="chip">Visio / présentiel</span>
+              <span class="chip">Compétition & saison</span>
+              <span class="chip">Routines & focus</span>
+              <span class="chip">Gestion stress / erreurs</span>
             </div>
-            <div class="notice">
-              <strong style="color:var(--gold)">Spécialisation :</strong><br/>
-              sport auto (qualif/course) + sports individuels (tennis, tir, boxe, etc.).
+
+            <div class="heroActions">
+              <a class="btn primary" href="#offres">Voir offres & tarifs</a>
+              <a class="btn" href="#sport-individuel">Sport individuel (ULTRA SEO)</a>
+              <a class="btn" href="#sport-auto">Présence compétition</a>
+            </div>
+
+            <div class="note">
+              ⚡ Approche structurée : diagnostic → plan d’action → entraînement mental → automatisation en situation réelle.
             </div>
           </div>
         </div>
 
-        <aside class="card side-card">
-          <div class="mini">
-            <h3>Approche</h3>
-            <p>Coaching haute performance + outils mentaux + stratégie compétition.</p>
-            <div class="badge-row" style="margin-top:10px">
-              <span class="badge gold">Gestion pression</span>
-              <span class="badge">Confiance</span>
-              <span class="badge">Focus</span>
-              <span class="badge blue">Relance</span>
+        <aside class="sideCard reveal">
+          <div class="sideInner">
+            <div class="sideTitle">
+              <h3>Ce que tu gagnes</h3>
+              <span class="badge">Concret</span>
             </div>
-          </div>
 
-          <div class="mini">
-            <h3>Pour qui ?</h3>
-            <p>Pilotes / compétiteurs qui veulent une performance reproductible, pas “un bon jour sur deux”.</p>
-          </div>
+            <ul class="list">
+              <li>Confiance stable (même sous enjeu)</li>
+              <li>Focus durable + reset rapide après erreur</li>
+              <li>Routine pré-compétition reproductible</li>
+              <li>Gestion de la pression / du regard / du résultat</li>
+              <li>Stratégie mentale adaptée à TON sport</li>
+            </ul>
 
-          <div class="mini">
-            <h3>Contact direct</h3>
-            <p><strong style="color:var(--text)">06 61 96 26 53</strong><br/>hybouvier@gmail.com</p>
-            <div class="hero-actions" style="margin-top:12px">
-              <a class="btn btn-primary" href="contact.html"><strong>Me contacter</strong></a>
-              <a class="btn" href="methode-hybou.html">Voir la méthode</a>
+            <div class="profile">
+              <img src="photo.png" alt="Portrait Jérémy BOUVIER">
+              <div>
+                <strong>Jérémy BOUVIER</strong>
+                <span>Préparateur mental • suivi individuel • présence compétition</span>
+              </div>
             </div>
+
+            <div class="sep"></div>
+
+            <a class="btn primary" href="#contact" style="width:100%">Demander un appel stratégique</a>
+            <p class="note">Réponse rapide • France entière • Tarifs clairs + options sur demande.</p>
           </div>
         </aside>
       </div>
     </div>
-  </section>
+  </main>
 
-  <!-- CE QU’ON TRAVAILLE -->
-  <section class="section">
+  <!-- Méthode -->
+  <section id="methode">
     <div class="container">
-      <h2>Ce qu’on travaille (concret)</h2>
-      <p class="lead">Des outils que tu peux appliquer en entraînement et le jour J, avec un cadre et des routines.</p>
-
-      <div class="grid-3">
-        <div class="card feature">
-          <h3>Pression & stress</h3>
-          <p>Régulation émotionnelle, respiration stratégique, neutralisation des pensées parasites.</p>
-        </div>
-        <div class="card feature">
-          <h3>Concentration</h3>
-          <p>Retour instantané au présent, focus task-based, routines entre actions.</p>
-        </div>
-        <div class="card feature">
-          <h3>Régularité</h3>
-          <p>Stabilité mentale, exécution sous contrainte, performance reproductible.</p>
+      <div class="sectionHead">
+        <div>
+          <h2>Méthode</h2>
+          <p>Une logique simple : structurer le mental comme l’entraînement. Tu sais quoi faire, quand le faire, et comment revenir au niveau même sous pression.</p>
         </div>
       </div>
 
-      <div class="grid-3" style="margin-top:16px">
-        <div class="card feature">
-          <h3>Relance après erreur</h3>
-          <p>Protocole anti-domino : reset mental, relance, reprise du plan.</p>
+      <div class="grid3">
+        <div class="card reveal">
+          <h3>1) Diagnostic</h3>
+          <p class="sub">On identifie tes points forts, tes déclencheurs et tes fuites d’énergie.</p>
+          <div class="kpis">
+            <div class="kpi"><strong>Clarté</strong><span>objectifs & priorités</span></div>
+            <div class="kpi"><strong>Profil pression</strong><span>stress / enjeu / erreurs</span></div>
+            <div class="kpi"><strong>Axes clés</strong><span>3 leviers max</span></div>
+          </div>
         </div>
-        <div class="card feature">
-          <h3>Moments clés</h3>
-          <p>Qualif, tie-break, finale, départ : activation optimale et lucidité.</p>
+
+        <div class="card reveal">
+          <h3>2) Plan mental</h3>
+          <p class="sub">Routines + exercices + scripts adaptés à ton sport et ton niveau.</p>
+          <div class="kpis">
+            <div class="kpi"><strong>Routine</strong><span>avant / pendant / après</span></div>
+            <div class="kpi"><strong>Focus</strong><span>consignes simples</span></div>
+            <div class="kpi"><strong>Reset</strong><span>erreur → retour</span></div>
+          </div>
         </div>
-        <div class="card feature">
-          <h3>Confiance stable</h3>
-          <p>Construction interne : identité de performance + preuves + ancrages.</p>
+
+        <div class="card reveal">
+          <h3>3) Transfert compétition</h3>
+          <p class="sub">On transforme l’entraînement mental en automatisme en condition réelle.</p>
+          <div class="kpis">
+            <div class="kpi"><strong>Simulation</strong><span>enjeu / fatigue</span></div>
+            <div class="kpi"><strong>Debrief</strong><span>ajustements</span></div>
+            <div class="kpi"><strong>Stabilité</strong><span>sur la durée</span></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- OFFRES / TARIFS -->
-  <section class="section" id="offres">
+  <!-- Offres & Tarifs (corrigé + ajouté) -->
+  <section id="offres">
     <div class="container">
-      <h2>Offres & Tarifs</h2>
-      <p class="lead">
-        Tu peux choisir un format simple (prix en €) ou un accompagnement premium “sur demande”.
-        On commence idéalement par un <strong>appel stratégique gratuit</strong>.
-      </p>
-
-      <div class="pricing">
-        <!-- GRATUIT -->
-        <div class="card price-card">
-          <div class="price-top">
-            <h3 class="price-name">Appel stratégique</h3>
-            <span class="price-tag">GRATUIT</span>
-          </div>
-          <div class="price">0€ <small>/ 30 min</small></div>
-          <p class="price-sub">
-            Diagnostic rapide : objectif, échéance, blocages, plan d’action recommandé.
-          </p>
-          <ul class="price-list">
-            <li>Clarification du besoin</li>
-            <li>Priorités mentales (pression, focus, confiance)</li>
-            <li>Recommandation de plan (si on travaille ensemble)</li>
-          </ul>
-          <div class="price-actions">
-            <a class="btn btn-primary" href="https://app.lemcal.com/@pm-jb/30-minutes"><strong>Réserver</strong></a>
-            <a class="btn" href="contact.html">Contact</a>
-          </div>
+      <div class="sectionHead">
+        <div>
+          <h2>Offres & Tarifs</h2>
+          <p>Des formats clairs (en €) + options <strong>sur demande</strong> pour les cas particuliers, équipes, saison, déplacements, etc.</p>
         </div>
+      </div>
 
-        <!-- PRIX EN € -->
-        <div class="card price-card highlight">
-          <div class="price-top">
-            <h3 class="price-name">Séance individuelle</h3>
-            <span class="price-tag">EN €</span>
-          </div>
-          <div class="price">90€ <small>/ 60 min</small></div>
-          <p class="price-sub">
-            Une séance ciblée pour débloquer un point précis et repartir avec des outils concrets.
-          </p>
-          <ul class="price-list">
-            <li>Analyse rapide + objectif</li>
-            <li>Outils immédiats (routine / respiration / focus)</li>
-            <li>Plan d’action simple à appliquer</li>
-          </ul>
-          <div class="price-actions">
-            <a class="btn btn-primary" href="https://app.lemcal.com/@pm-jb/30-minutes"><strong>Voir si c’est adapté</strong></a>
-            <a class="btn" href="coaching-mental-haut-niveau.html">Détails</a>
-          </div>
-        </div>
+      <!-- Bloc Présence compétition (comme ton visuel) -->
+      <div class="card reveal">
+        <h3>Présence Stratégique Compétition</h3>
+        <p class="sub">Présence sur place : briefing, recalibrage, gestion de l’erreur, débrief immédiat. Contexte réel.</p>
 
-        <!-- SUR DEMANDE -->
-        <div class="card price-card">
-          <div class="price-top">
-            <h3 class="price-name">Pack Performance / Suivi Saison</h3>
-            <span class="price-tag">SUR DEMANDE</span>
+        <div class="pricingGrid">
+          <div class="pricingCard">
+            <h3>Ce que je fais sur place</h3>
+            <ul>
+              <li>Briefing mental pré-épreuve</li>
+              <li>Ajustement activation</li>
+              <li>Gestion pression en temps réel</li>
+              <li>Recalibrage entre séries / manches</li>
+              <li>Débriefing immédiat</li>
+              <li>Rapport stratégique post compétition</li>
+            </ul>
+            <div class="btnRow">
+              <a class="btn primary" href="#contact" style="width:100%">Demander une disponibilité</a>
+            </div>
           </div>
-          <div class="price">Sur demande <small>/ selon objectif</small></div>
-          <p class="price-sub">
-            Pour un vrai cap : routines compétition, protocole relance, suivi et ajustements jusqu’à l’échéance.
-          </p>
-          <ul class="price-list">
-            <li>Diagnostic mental complet</li>
-            <li>Routines avant / pendant / après</li>
-            <li>Protocole “relance après erreur”</li>
-            <li>Suivi & ajustements (visio France entière)</li>
-          </ul>
-          <div class="price-actions">
-            <a class="btn btn-primary" href="https://app.lemcal.com/@pm-jb/30-minutes"><strong>Échanger</strong></a>
-            <a class="btn" href="contact.html">Contact</a>
+
+          <div class="pricingCard">
+            <h3>Tarification</h3>
+            <ul class="priceList">
+              <li><strong>700€</strong> / 1 jour + frais réels VHR</li>
+              <li><strong>1200€</strong> / 2 jours + VHR</li>
+              <li><strong>1650€</strong> / 3 jours + VHR</li>
+              <li><strong>1950€</strong> / 4 jours + VHR</li>
+            </ul>
+            <p class="fine">
+              VHR : véhicule • hébergement • restauration (frais réels).<br/>
+              Cas particulier : <strong>tarif sur demande</strong>.
+            </p>
           </div>
         </div>
       </div>
 
-      <div class="notice" style="margin-top:16px">
-        <strong style="color:var(--gold)">Note :</strong> les packs “sur demande” évitent les formats inutiles.
-        On fixe le meilleur format selon ton sport, ton niveau et ton échéance.
+      <!-- Programmes (comme ton visuel) -->
+      <div class="sectionHead" style="margin-top:18px">
+        <div>
+          <h2>Programmes</h2>
+          <p>3 formats. Une logique : structurer le mental comme l’entraînement.</p>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- BLOCS SPORT -->
-  <section class="section">
-    <div class="container">
-      <div class="grid-2">
-        <div class="card feature">
-          <h2 style="margin:0 0 10px">Sport auto</h2>
-          <p class="lead">Qualification, trafic, relance, décision rapide, régularité tour après tour.</p>
+      <div class="programmes">
+        <div class="pack reveal">
+          <span class="tag">Ciblée</span>
+          <h3>Séance Individuelle</h3>
+          <div class="price">140€</div>
+          <ul>
+            <li>Analyse rapide + ajustement stratégique</li>
+            <li>Pression / blocage / focus</li>
+            <li>Mini plan d’action</li>
+          </ul>
+          <div class="btnRow">
+            <a class="btn" href="#contact" style="width:100%">Appel Stratégique GRATUIT</a>
+          </div>
+        </div>
+
+        <div class="pack reveal">
+          <span class="tag">5 séances</span>
+          <h3>Programme<br/>Fondations Mentales</h3>
+          <div class="price">690€</div>
+          <ul>
+            <li>Stabilité mentale & routines</li>
+            <li>Confiance / blocages / pression</li>
+            <li>Plan d’action personnalisé</li>
+          </ul>
+          <div class="btnRow">
+            <a class="btn" href="#contact" style="width:100%">Appel Stratégique GRATUIT</a>
+          </div>
+        </div>
+
+        <div class="pack featured reveal">
+          <span class="tag">Recommandé</span>
+          <h3>Programme<br/>Performance Saison</h3>
+          <div class="price">1200€</div>
+          <ul>
+            <li>8 séances individuelles</li>
+            <li>3 briefings + 3 débriefings (visio / vocal / écrit)</li>
+            <li>Plan mental compétition personnalisé</li>
+            <li>Audio d’activation</li>
+            <li>Évaluation avant / après</li>
+          </ul>
+          <div class="btnRow">
+            <a class="btn primary" href="#contact" style="width:100%">Renseignements (appel gratuit)</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarifs sur demande -->
+      <div class="grid2" style="margin-top:18px">
+        <div class="card reveal">
+          <h3>Tarifs sur demande</h3>
+          <p class="sub">Pour les demandes spécifiques : saison complète, déplacements, équipes, encadrement compétition multi-jours, objectifs très ciblés.</p>
           <ul class="list">
-            <li>Routine pré-qualif + protocole “tour lancé”</li>
-            <li>Gestion incident (contact, drapeau, safety)</li>
-            <li>Focus et stabilité en course</li>
+            <li>Suivi élite (périodisation mentale)</li>
+            <li>Team / coach / staff (protocole commun)</li>
+            <li>Présence compétition + debriefs écrits</li>
+            <li>Pack “urgence” (échéance proche)</li>
           </ul>
-          <div style="margin-top:14px">
-            <a class="btn btn-primary" href="preparateur-mental-sport-auto.html"><strong>Lire la page sport auto</strong></a>
+          <a class="btn primary" href="#contact" style="width:100%">Demander un devis</a>
+        </div>
+
+        <div class="card reveal">
+          <h3>Ce que tu reçois</h3>
+          <p class="sub">Quel que soit le format, tu repars avec du concret.</p>
+          <div class="kpis">
+            <div class="kpi"><strong>Plan d’action</strong><span>simple et mesurable</span></div>
+            <div class="kpi"><strong>Routines</strong><span>avant / pendant / après</span></div>
+            <div class="kpi"><strong>Outils pression</strong><span>respiration, focus, reset</span></div>
+            <div class="kpi"><strong>Suivi</strong><span>ajustements continus</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SPORT INDIVIDUEL (ULTRA SEO, ~1500 mots intégrés sans casser le design) -->
+  <section id="sport-individuel">
+    <div class="container">
+      <div class="sectionHead">
+        <div>
+          <h2>Préparation mentale sport individuel (ULTRA SEO)</h2>
+          <p>Objectif : être prêt quand ça compte. Confiance, focus, routine, gestion de l’erreur, régularité — dans ton sport, avec ton profil.</p>
+        </div>
+      </div>
+
+      <div class="seoBlock reveal">
+        <div class="seoCols">
+          <div class="mini">
+            <h3>Pour quels sports ?</h3>
+            <p>
+              Tennis, boxe, tir sportif, golf, crossfit, musculation, trail, natation, arts martiaux, escalade, badminton, cyclisme,
+              sports de combat, ball-trap… En sport individuel, tu es seul face à l’enjeu : la performance dépend directement de ta capacité
+              à rester stable mentalement.
+            </p>
+          </div>
+          <div class="mini">
+            <h3>Le vrai problème</h3>
+            <p>
+              La plupart des sportifs ne “manquent pas de niveau”. Ils perdent leur niveau sous pression :
+              accélération, crispation, sur-contrôle, pensée résultat, peur de l’erreur, perte de rythme.
+              La préparation mentale sert à protéger ton geste et ton intelligence de jeu quand le stress monte.
+            </p>
           </div>
         </div>
 
-        <div class="card feature">
-          <h2 style="margin:0 0 10px">Sport individuel</h2>
-          <p class="lead">Tennis, tir sportif, boxe, musculation… performance quand tu es seul face au résultat.</p>
-          <ul class="list">
-            <li>Routine entre actions / entre points</li>
-            <li>Gestion des moments clés (break, finale, record)</li>
-            <li>Relance après erreur / faute</li>
-          </ul>
-          <div style="margin-top:14px">
-            <a class="btn btn-primary" href="preparateur-mental-sport-individuel.html"><strong>Lire la page sport individuel</strong></a>
+        <h3>Pourquoi la préparation mentale est décisive en sport individuel</h3>
+        <p>
+          En sport individuel, la performance se joue souvent sur des détails : une décision, une routine, un timing, une émotion mal gérée.
+          Tu peux avoir un excellent niveau à l’entraînement et “disparaître” en compétition si ton mental se dérègle.
+          La préparation mentale ne consiste pas à se motiver “plus fort”. Elle consiste à construire un système stable :
+          des routines, des repères, des outils et une stratégie d’attention qui te permettent de reproduire ton niveau
+          quand le contexte devient difficile.
+        </p>
+
+        <h4>Confiance : la rendre stable (et pas fragile)</h4>
+        <p>
+          La confiance fragile dépend du résultat : si ça marche, tu te sens fort ; si tu rates, tout s’écroule.
+          En accompagnement, on construit une confiance stable : basée sur tes processus (ce que tu contrôles),
+          ton plan d’action, et des preuves concrètes. Résultat : tu restes lucide après une erreur, tu continues à jouer juste,
+          et tu reviens plus vite dans ta zone.
+        </p>
+
+        <h4>Focus : savoir quoi regarder, quand, et comment y revenir</h4>
+        <p>
+          Le focus en sport individuel n’est pas “se concentrer plus”. C’est choisir une cible utile (simple),
+          tenir cette cible, et savoir revenir dès que l’esprit part. Un bon focus est un outil de performance :
+          il réduit le bruit mental, stabilise la technique, et améliore la prise de décision.
+          On travaille aussi le “focus sous fatigue” et le “focus sous enjeu”, parce que c’est là que tout se joue.
+        </p>
+
+        <h4>Pression et enjeu : transformer le stress en énergie contrôlée</h4>
+        <p>
+          Le stress n’est pas l’ennemi : c’est une énergie. Le problème, c’est quand elle devient désorganisée :
+          respiration haute, tension, pensées parasites, précipitation. On met en place des protocoles courts
+          (respiration, ancrage, reset) pour que la pression reste au service de ta performance.
+          Tu apprends à lire tes signaux, à agir vite, et à garder ta stratégie.
+        </p>
+
+        <h4>Gestion de l’erreur : l’arme des sportifs réguliers</h4>
+        <p>
+          Ce qui sépare un bon sportif d’un sportif performant, ce n’est pas l’absence d’erreur : c’est la vitesse de retour.
+          Un sportif performant sait “perdre une action” sans perdre le match, “perdre un point” sans perdre sa qualité.
+          On construit un protocole de reset (1 à 3 étapes) : accepter, respirer, recentrer, agir.
+          C’est souvent LE levier qui change tout en sport individuel.
+        </p>
+
+        <h3>Comment se déroule un accompagnement en préparation mentale (sport individuel)</h3>
+        <p>
+          L’accompagnement suit une logique claire : on diagnostique ton profil, on choisit 2 à 3 leviers majeurs,
+          puis on structure un entraînement mental comme un entraînement physique : progressif, mesurable, orienté transfert compétition.
+          Tu n’as pas besoin de 50 techniques. Tu as besoin de quelques outils puissants, utilisés au bon moment.
+        </p>
+
+        <div class="seoCols">
+          <div class="mini">
+            <h3>1) Diagnostic</h3>
+            <p>
+              On analyse : contexte de compétition, déclencheurs (pression, regard, enjeu), habitudes mentales,
+              routine actuelle, capacité de reset, niveau d’activation. On clarifie ton objectif : performance, régularité,
+              confiance, retour après blessure, gestion émotionnelle, etc.
+            </p>
+          </div>
+          <div class="mini">
+            <h3>2) Plan mental</h3>
+            <p>
+              On construit : routine pré-compétition, routine entre actions, outils pression, stratégie de focus,
+              plan d’action hebdomadaire. Tu sais quoi faire à l’entraînement ET en compétition.
+            </p>
           </div>
         </div>
+
+        <h4>Routines : le secret de la régularité</h4>
+        <p>
+          Une routine efficace est courte, simple et reproductible. Elle stabilise ta respiration, ta posture, ta décision.
+          Elle empêche la panique et le sur-contrôle. En sport individuel, la routine est un filet de sécurité :
+          elle te ramène à ton jeu même quand l’émotion prend de la place.
+        </p>
+
+        <h4>Objectifs : passer du résultat au processus</h4>
+        <p>
+          “Je veux gagner” est une intention, mais ce n’est pas un plan. On transforme ton objectif en actions concrètes :
+          focus, intensité, consignes techniques simples, stratégie de jeu, attitude après erreur.
+          Tu te donnes une chance de performer parce que tu contrôles la qualité de ce que tu fais.
+        </p>
+
+        <h3>Quand la préparation mentale est la plus utile</h3>
+        <p>
+          Tu veux passer un cap ? Alors la préparation mentale est particulièrement efficace dans ces situations :
+          (1) tu t’effondres sous pression, (2) tu joues mieux à l’entraînement qu’en compétition,
+          (3) tu as des blocages (peur de rater, peur de gagner, peur du regard),
+          (4) tu manques de régularité, (5) tu veux optimiser une saison, (6) tu reviens d’une blessure.
+        </p>
+
+        <h4>Et si tu es déjà “fort mentalement” ?</h4>
+        <p>
+          Alors on optimise : précision du focus, automatisation, routine de performance, stratégie de récupération mentale,
+          et transfert en situation réelle. Le haut niveau se joue sur la qualité d’exécution dans les moments clés.
+        </p>
+
+        <div class="sep"></div>
+
+        <p style="margin:0; color:var(--muted2)">
+          👉 Tu veux un plan mental personnalisé pour ton sport individuel ? Va dans <strong>Offres & Tarifs</strong> ou contacte-moi directement.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- TÉMOIGNAGES -->
-  <section class="section">
+  <!-- SPORT AUTO -->
+  <section id="sport-auto">
     <div class="container">
-      <h2>Témoignages</h2>
-      <p class="lead">Exemples typiques de progression (tu pourras remplacer par les vrais).</p>
+      <div class="sectionHead">
+        <div>
+          <h2>Sport auto</h2>
+          <p>Gestion de la pression, erreurs, rythme, décisions rapides, confiance et consignes simples en situation.</p>
+        </div>
+      </div>
 
-      <div class="grid-3">
-        <div class="card quote">
-          <strong>Pilote</strong>
-          <p>“Plus de trous noirs en qualif. Routine claire et relance après erreur beaucoup plus rapide.”</p>
+      <div class="grid2">
+        <div class="card reveal">
+          <h3>Axes clés</h3>
+          <ul class="list">
+            <li>Activation (ni trop haut, ni trop bas)</li>
+            <li>Reset après erreur / drapeau / sortie</li>
+            <li>Focus : repères utiles (pas le bruit)</li>
+            <li>Routines briefing / debrief</li>
+            <li>Stabilité sur week-end complet</li>
+          </ul>
+          <a class="btn primary" href="#offres" style="width:100%">Voir la présence compétition</a>
         </div>
-        <div class="card quote">
-          <strong>Tireur sportif</strong>
-          <p>“Moins d’auto-sabotage, plus de stabilité sur les séries et meilleure lucidité.”</p>
-        </div>
-        <div class="card quote">
-          <strong>Tennis compétition</strong>
-          <p>“J’ai une routine et je joue point par point. Les moments clés sont mieux gérés.”</p>
+
+        <div class="card reveal">
+          <h3>Ce que je vise</h3>
+          <p class="sub">Tu gardes ta lucidité, tu exécutes, tu récupères vite, tu restes stratégique.</p>
+          <div class="kpis">
+            <div class="kpi"><strong>Clarté</strong><span>consignes simples</span></div>
+            <div class="kpi"><strong>Stabilité</strong><span>rythme constant</span></div>
+            <div class="kpi"><strong>Résilience</strong><span>erreur → retour</span></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="section">
+  <section id="faq">
     <div class="container">
-      <h2>FAQ</h2>
-      <div class="faq">
-        <details>
-          <summary>Tu travailles à distance ?</summary>
-          <p>Oui. Visio France entière. Les routines et outils sont adaptés à ton sport et à ton calendrier.</p>
-        </details>
-        <details>
-          <summary>Les tarifs “sur demande”, ça veut dire quoi ?</summary>
-          <p>On adapte le format au besoin réel : échéance, fréquence, niveau, contraintes compétition. L’objectif : efficacité.</p>
-        </details>
-        <details>
-          <summary>Tu garantis des résultats ?</summary>
-          <p>Non. Il n’y a pas d’obligation de résultat. En revanche, on met en place une méthode, des routines et un suivi concret.</p>
-        </details>
+      <div class="sectionHead">
+        <div>
+          <h2>FAQ</h2>
+          <p>Réponses rapides (et claires) aux questions les plus fréquentes.</p>
+        </div>
       </div>
 
-      <div class="hero-actions" style="margin-top:18px">
-        <a class="btn btn-primary" href="https://app.lemcal.com/@pm-jb/30-minutes"><strong>Réserver un appel stratégique</strong></a>
-        <a class="btn" href="contact.html">Me contacter</a>
+      <div class="faq">
+        <details class="reveal">
+          <summary>Je fais un sport individuel : est-ce que ça marche même si je “craque” sous pression ?</summary>
+          <p>Oui. L’objectif est de construire un système (routine + focus + reset) pour protéger ta performance dans les moments clés. On travaille la vitesse de retour après erreur et la stabilité d’activation.</p>
+        </details>
+
+        <details class="reveal">
+          <summary>Tu fais uniquement en présentiel ?</summary>
+          <p>Non. France entière : visio / vocal / écrit + présentiel et présence compétition selon besoin.</p>
+        </details>
+
+        <details class="reveal">
+          <summary>Je veux des tarifs clairs, mais j’ai un cas particulier.</summary>
+          <p>Les tarifs standards sont affichés (en €). Si ton besoin sort du cadre (saison, équipe, déplacement, urgence), je fais une proposition <strong>sur demande</strong>.</p>
+        </details>
+
+        <details class="reveal">
+          <summary>Combien de séances pour voir une différence ?</summary>
+          <p>Souvent dès 1 à 2 séances tu ressors avec un plan concret. Pour de vrais automatismes en compétition, un programme (5 ou 8 séances) est plus efficace.</p>
+        </details>
       </div>
     </div>
   </section>
-</main>
 
-<footer class="footer">
-  <div class="container">
-    <div class="cols">
-      <div>
-        <div class="brand" style="margin-bottom:8px">
-          <div class="brand-badge" aria-hidden="true"><span>JB</span></div>
-          <div>
-            <div style="font-weight:850">Jérémy Bouvier</div>
-            <small>Préparateur mental • Sport auto & sports individuels</small>
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="sectionHead">
+        <div>
+          <h2>Contact</h2>
+          <p>Dis-moi ton sport, ton niveau, ton échéance et ton besoin. Je te réponds rapidement.</p>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="card reveal">
+          <h3>Prise de contact</h3>
+          <p class="sub">Canal simple (message) + option appel stratégique gratuit.</p>
+
+          <ul class="list">
+            <li><strong>Email :</strong> <a href="mailto:hybouvier@gmail.com">hybouvier@gmail.com</a></li>
+            <li><strong>Téléphone :</strong> <a href="tel:+33661962653">06 61 96 26 53</a></li>
+            <li><strong>France entière</strong> • Visio / présentiel</li>
+          </ul>
+
+          <div class="sep"></div>
+
+          <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes" target="_blank" rel="noopener" style="width:100%">
+            Réserver un appel stratégique (30 min)
+          </a>
+
+          <p class="note">En réservant, précise : sport + échéance + objectif (focus / pression / confiance / régularité).</p>
+        </div>
+
+        <div class="card reveal">
+          <h3>Message rapide</h3>
+          <p class="sub">Copie/colle et complète :</p>
+          <div class="seoBlock" style="padding:14px; margin-top:10px">
+            <p style="margin:0">
+              Sport : …<br/>
+              Niveau : …<br/>
+              Prochaine échéance : …<br/>
+              Problème principal : …<br/>
+              Objectif : …<br/>
+              Disponibilités : …
+            </p>
+          </div>
+          <div class="sep"></div>
+          <a class="btn" href="mailto:hybouvier@gmail.com?subject=Demande%20-%20Préparation%20mentale&body=Sport%20:%20%0ANiveau%20:%20%0AProchaine%20%C3%A9ch%C3%A9ance%20:%20%0AProbl%C3%A8me%20principal%20:%20%0AObjectif%20:%20%0ADisponibilit%C3%A9s%20:%20" style="width:100%">
+            Envoyer un email pré-rempli
+          </a>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footerGrid">
+            <div>
+              <strong style="color:var(--text)">Jérémy BOUVIER – Préparateur Mental</strong><br/>
+              <span>Sport individuel & sport auto • France entière</span>
+              <div class="sep"></div>
+              <span style="display:block; max-width:80ch">
+                Mentions : l’accompagnement en préparation mentale ne constitue pas une promesse de résultat.
+                Les performances dépendent de nombreux facteurs (entraînement, santé, contexte, etc.).
+              </span>
+            </div>
+            <div>
+              <strong style="color:var(--text)">Accès</strong>
+              <div style="margin-top:10px; display:flex; flex-direction:column; gap:8px">
+                <a href="#offres">Offres & Tarifs</a>
+                <a href="#sport-individuel">Sport individuel</a>
+                <a href="#sport-auto">Sport auto</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="small">© <span id="year"></span> pm-jb.com — Tous droits réservés.</div>
-      </div>
-      <div style="text-align:right">
-        <div class="small"><a href="contact.html">Contact</a> • <a href="methode-hybou.html">Méthode HyBou</a></div>
-        <div class="small" style="margin-top:6px">Tel: 06 61 96 26 53 • hybouvier@gmail.com</div>
-      </div>
-    </div>
-  </div>
-</footer>
+      </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-<script src="script.js"></script>
+    </div>
+  </section>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jérémy BOUVIER",
+    "jobTitle": "Préparateur mental",
+    "url": "https://pm-jb.com/",
+    "image": "https://pm-jb.com/photo.png",
+    "email": "mailto:hybouvier@gmail.com",
+    "telephone": "+33661962653",
+    "areaServed": "FR",
+    "knowsAbout": [
+      "préparation mentale sport individuel",
+      "gestion de la pression",
+      "confiance en soi",
+      "focus",
+      "routines de performance",
+      "sport automobile"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Je fais un sport individuel : est-ce que ça marche même si je craque sous pression ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui. L’objectif est de construire un système (routine + focus + reset) pour protéger ta performance dans les moments clés."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Tu fais uniquement en présentiel ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non. France entière : visio / vocal / écrit + présentiel et présence compétition selon besoin."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Je veux des tarifs clairs, mais j’ai un cas particulier.",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Les tarifs standards sont affichés. Si le besoin sort du cadre, une proposition sur demande est possible."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script>
+    // Simple reveal on scroll
+    const els = Array.from(document.querySelectorAll('.reveal'));
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); }
+      });
+    }, {threshold: 0.12});
+    els.forEach(el=>io.observe(el));
+  </script>
+
 </body>
 </html>
