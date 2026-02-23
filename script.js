@@ -1,17 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Reveal simple
-  const els = document.querySelectorAll("[data-reveal]");
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add("reveal-on");
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  els.forEach(el => io.observe(el));
+  // Highlight menu current page
+  const path = location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll("nav a").forEach(a => {
+    const href = (a.getAttribute("href") || "").split("/").pop();
+    if (href === path) a.style.opacity = "1";
+  });
 
-  // Smooth focus on FAQ open
+  // Smooth open details (FAQ)
   document.querySelectorAll("details").forEach(d => {
     d.addEventListener("toggle", () => {
       if (d.open) d.scrollIntoView({ behavior:"smooth", block:"center" });
