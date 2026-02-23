@@ -225,3 +225,33 @@ details p{margin:10px 0 0; color:rgba(255,255,255,.82)}
   fill:currentColor;
   opacity:.95;
 }
+/* BLOG */
+.breadcrumbs{
+  display:flex; gap:10px; flex-wrap:wrap;
+  align-items:center;
+  font-size:14px;
+  opacity:.85;
+  margin-bottom:14px;
+}
+.breadcrumbs a{ text-decoration:none; }
+.article{
+  max-width: 880px;
+}
+.article h1{ margin-top:10px; }
+.article h2{ margin-top:26px; }
+.article p{ line-height:1.75; }
+.article-meta{
+  display:flex; gap:14px; flex-wrap:wrap;
+  margin:12px 0 18px;
+  font-size:14px;
+  opacity:.9;
+}
+.article-cover{
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.04);
+  padding:18px;
+}
+.article-cta{
+  margin-top:22px;
+}
