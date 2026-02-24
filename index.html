@@ -3,16 +3,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jérémy Bouvier – Préparateur Mental Sport individuel & disciplines de précision</title>
+
+  <title>Jérémy Bouvier – Préparateur Mental | Sport individuel & disciplines de précision</title>
   <meta name="description" content="Préparation mentale sport individuel & disciplines de précision : routines, focus, après-erreur, gestion de la pression. Appel stratégique gratuit." />
   <link rel="canonical" href="https://pm-jb.com/" />
+
+  <!-- Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jérémy Bouvier – Préparateur Mental" />
+  <meta property="og:description" content="Routines • focus • après-erreur • pression. Appel stratégique gratuit." />
+  <meta property="og:url" content="https://pm-jb.com/" />
+  <meta name="twitter:card" content="summary" />
+
+  <meta name="theme-color" content="#070707" />
+
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Schema.org (E-E-A-T / crédibilité) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "@id":"https://pm-jb.com/#website",
+        "url":"https://pm-jb.com/",
+        "name":"Jérémy Bouvier – Préparateur Mental",
+        "inLanguage":"fr"
+      },
+      {
+        "@type":"Person",
+        "@id":"https://pm-jb.com/#person",
+        "name":"Jérémy Bouvier",
+        "jobTitle":"Préparateur mental",
+        "url":"https://pm-jb.com/",
+        "email":"mailto:hybouvier@gmail.com",
+        "telephone":"+33661962653"
+      },
+      {
+        "@type":"ProfessionalService",
+        "@id":"https://pm-jb.com/#service",
+        "name":"Préparation mentale – Jérémy Bouvier",
+        "url":"https://pm-jb.com/",
+        "telephone":"+33661962653",
+        "email":"mailto:hybouvier@gmail.com",
+        "areaServed":"FR",
+        "sameAs":[
+          "https://pm-jb.com/"
+        ]
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://pm-jb.com/#webpage",
+        "url":"https://pm-jb.com/",
+        "name":"Préparateur mental sport individuel & disciplines de précision",
+        "isPartOf":{"@id":"https://pm-jb.com/#website"},
+        "about":{"@id":"https://pm-jb.com/#person"},
+        "inLanguage":"fr"
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://pm-jb.com/#faq",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"Est-ce que l’appel stratégique est vraiment gratuit ?",
+            "acceptedAnswer":{"@type":"Answer","text":"Oui. 30 minutes pour analyser ta situation, ton objectif et déterminer si un accompagnement est pertinent. Si ce n’est pas le bon moment, je te le dis clairement."}
+          },
+          {
+            "@type":"Question",
+            "name":"Quels profils tu sélectionnes ?",
+            "acceptedAnswer":{"@type":"Answer","text":"Profils engagés, saison importante, objectif qualification/podium, et capacité à appliquer un cadre (routines, feedback, progression)."}
+          },
+          {
+            "@type":"Question",
+            "name":"Présentiel ou visio : qu’est-ce qui marche le mieux ?",
+            "acceptedAnswer":{"@type":"Answer","text":"Les deux fonctionnent. On choisit selon ton contexte. L’important, c’est la structure et l’application (entraînement/compétition)."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
-  <!-- Header injecté via script.js + partials/header.html -->
-  <div id="site-header"></div>
+  <!-- TOPBAR (conversion + crédibilité) -->
+  <div class="topbar">
+    <div class="container">
+      <div class="small"><b>Appel stratégique gratuit</b> · 30 minutes · Visio France entière</div>
+      <div class="links small">
+        <a href="tel:+33661962653">📞 06 61 96 26 53</a>
+        <a href="mailto:hybouvier@gmail.com">✉️ hybouvier@gmail.com</a>
+        <a href="https://app.lemcal.com/@pm-jb/30-minutes" rel="noopener">📅 Réserver</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER (statique, sans JS, menu mobile via <details>) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Accueil">
+        <!-- Si tu as un logo, mets-le ici (sinon, supprime l'image) -->
+        <!-- <img src="photo.png" alt="Logo Jérémy Bouvier" width="44" height="44" decoding="async" /> -->
+        <div class="brand-text">
+          <div class="name">Jérémy Bouvier</div>
+          <div class="tag">Préparateur mental • France entière</div>
+        </div>
+      </a>
+
+      <details class="nav-details">
+        <summary class="nav-toggle" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </summary>
+
+        <nav class="site-nav" aria-label="Navigation principale">
+          <a href="#programmes">Programmes</a>
+          <a href="#temoignages">Témoignages</a>
+          <a href="#presence">Présence</a>
+          <a href="#faq">FAQ</a>
+          <a href="contact.html">Contact</a>
+          <a class="cta" href="https://app.lemcal.com/@pm-jb/30-minutes" rel="noopener">Appel gratuit</a>
+        </nav>
+      </details>
+    </div>
+  </header>
 
   <main>
 
@@ -35,7 +151,7 @@
           <p class="lead"><b>La performance se structure.</b></p>
 
           <div class="actions">
-            <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes">Appel Découverte GRATUIT (30 min)</a>
+            <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes" rel="noopener">Appel Découverte GRATUIT (30 min)</a>
             <a class="btn ghost" href="#programmes">Voir les programmes</a>
           </div>
 
@@ -75,7 +191,7 @@
             Je travaille avec des athlètes qui ont une saison importante / un objectif qualification / podium, et qui acceptent un cadre : application, routines, feedback, progression.
           </p>
           <div class="actions">
-            <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes">Renseignements (appel gratuit)</a>
+            <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes" rel="noopener">Renseignements (appel gratuit)</a>
             <a class="btn ghost" href="faq.html">Voir les critères</a>
           </div>
         </div>
@@ -98,7 +214,7 @@
               <li>Mini plan d’action</li>
             </ul>
             <div class="actions">
-              <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes">Appel Stratégique GRATUIT</a>
+              <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes" rel="noopener">Appel Stratégique GRATUIT</a>
             </div>
           </div>
 
@@ -112,7 +228,7 @@
               <li>Plan d’action personnalisé</li>
             </ul>
             <div class="actions">
-              <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes">Appel Stratégique GRATUIT</a>
+              <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes" rel="noopener">Appel Stratégique GRATUIT</a>
             </div>
           </div>
 
@@ -129,7 +245,7 @@
               <li>Évaluation avant / après</li>
             </ul>
             <div class="actions">
-              <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes">Renseignements (appel gratuit)</a>
+              <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes" rel="noopener">Renseignements (appel gratuit)</a>
             </div>
           </div>
         </div>
@@ -194,7 +310,7 @@
               <li>Débriefing immédiat</li>
               <li>Rapport stratégique post compétition</li>
             </ul>
-            <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes">Demander une disponibilité</a>
+            <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes" rel="noopener">Demander une disponibilité</a>
           </div>
 
           <div class="card" style="grid-column: span 2">
@@ -247,7 +363,7 @@
         <h2>Appel Stratégique GRATUIT</h2>
         <p class="lead">30 minutes • sans engagement • analyse rapide • décision stratégique ensuite.</p>
         <div class="actions">
-          <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes">Réserver sur le calendrier</a>
+          <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes" rel="noopener">Réserver sur le calendrier</a>
           <a class="btn ghost" href="contact.html">Contact</a>
         </div>
         <p class="small" style="margin-top:12px">06 61 96 26 53 • ✉️ hybouvier@gmail.com</p>
@@ -256,12 +372,50 @@
 
   </main>
 
-  <!-- Footer + Sticky injectés via script.js + partials -->
-  <div id="site-footer"></div>
-  <div id="site-sticky"></div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="grid-3" style="grid-template-columns:1.2fr .9fr .9fr">
+        <div>
+          <div style="font-weight:900; margin-bottom:6px">Jérémy Bouvier</div>
+          <div class="small">Préparateur mental · Sport individuel & disciplines de précision · Visio France entière</div>
+          <div class="small" style="margin-top:10px">
+            <a href="tel:+33661962653">06 61 96 26 53</a> ·
+            <a href="mailto:hybouvier@gmail.com">hybouvier@gmail.com</a>
+          </div>
+        </div>
+        <div class="small">
+          <div style="font-weight:900; margin-bottom:6px">Navigation</div>
+          <div><a href="#programmes">Programmes</a></div>
+          <div><a href="#temoignages">Témoignages</a></div>
+          <div><a href="#presence">Présence</a></div>
+          <div><a href="faq.html">FAQ détaillée</a></div>
+        </div>
+        <div class="small">
+          <div style="font-weight:900; margin-bottom:6px">Prendre RDV</div>
+          <div><a href="https://app.lemcal.com/@pm-jb/30-minutes" rel="noopener">Appel stratégique (30 min)</a></div>
+          <div><a href="contact.html">Candidater / Contact</a></div>
+          <div style="margin-top:10px; opacity:.9">© <span id="y">2026</span> pm-jb.com</div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-  <!-- IMPORTANT : script injection -->
-  <script src="script.js" defer></script>
+  <!-- STICKY -->
+  <div class="sticky" role="region" aria-label="Appel stratégique">
+    <div class="container">
+      <div class="small"><b>Appel stratégique gratuit</b> · 30 min · Objectif / plan / cadrage</div>
+      <div class="actions" style="margin-top:0">
+        <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes" rel="noopener">Réserver</a>
+        <a class="btn ghost" href="tel:+33661962653">Appeler</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- mini JS optionnel uniquement pour l'année (supprimable) -->
+  <script>
+    const y=document.getElementById('y'); if(y) y.textContent=new Date().getFullYear();
+  </script>
 
 </body>
 </html>
