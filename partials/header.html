@@ -14,17 +14,22 @@
   </div>
 </div>
 
-<header>
+<header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="/index.html" aria-label="Accueil">
       <img src="/assets/logo-hybou.png" alt="Logo HyBou" />
-      <div>
+      <div class="brand-text">
         <div class="name">Jérémy BOUVIER</div>
         <div class="tag">Préparateur Mental</div>
       </div>
     </a>
 
-    <nav>
+    <!-- Bouton mobile -->
+    <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" aria-label="Navigation principale">
       <a href="/index.html">Accueil</a>
       <a href="/sport-automobile.html">Sport auto</a>
       <a href="/sport-individuel.html">Sport individuel</a>
@@ -37,3 +42,17 @@
     </nav>
   </div>
 </header>
+
+<script>
+  (function(){
+    const header = document.querySelector(".site-header");
+    const btn = header?.querySelector(".nav-toggle");
+    const nav = header?.querySelector(".site-nav");
+    if(!btn || !nav) return;
+
+    btn.addEventListener("click", () => {
+      const open = nav.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  })();
+</script>
