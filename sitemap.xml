@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://pm-jb.com/</loc>
-  </url>
-  <url>
-    <loc>https://pm-jb.com/faq.html</loc>
-  </url>
-  <url>
-    <loc>https://pm-jb.com/contact.html</loc>
-  </url>
+  <url><loc>https://pm-jb.com/</loc></url>
+  <url><loc>https://pm-jb.com/sport-individuel.html</loc></url>
+  <url><loc>https://pm-jb.com/disciplines-precision.html</loc></url>
+  <url><loc>https://pm-jb.com/sport-automobile.html</loc></url>
+  <url><loc>https://pm-jb.com/presence-competition.html</loc></url>
+  <url><loc>https://pm-jb.com/faq.html</loc></url>
+  <url><loc>https://pm-jb.com/contact.html</loc></url>
+  <url><loc>https://pm-jb.com/blog/</loc></url>
+
+  <!-- Ajoute ici tes articles réels :
+  <url><loc>https://pm-jb.com/blog/pression-competition-sport-individuel.html</loc></url>
+  -->
 </urlset>
