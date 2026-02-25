@@ -64,7 +64,6 @@
       <div class="links">
         <a href="tel:+33661962653">06 61 96 26 53</a>
         <a href="mailto:hybouvier@gmail.com">✉️ hybouvier@gmail.com</a>
-
         <a class="icon-link" href="https://app.lemcal.com/@pm-jb/30-minutes" rel="noopener" aria-label="Réserver un appel" title="Réserver un appel">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1.5A2.5 2.5 0 0 1 22 6.5v13A2.5 2.5 0 0 1 19.5 22h-15A2.5 2.5 0 0 1 2 19.5v-13A2.5 2.5 0 0 1 4.5 4H6V3a1 1 0 0 1 1-1Zm12.5 6H4.5a.5.5 0 0 0-.5.5v11a.5.5 0 0 0 .5.5h15a.5.5 0 0 0 .5-.5v-11a.5.5 0 0 0-.5-.5ZM7 11h3v3H7v-3Zm4 0h3v3h-3v-3Zm4 0h3v3h-3v-3Z"/>
@@ -74,7 +73,7 @@
     </div>
   </div>
 
-  <!-- HEADER -->
+  <!-- HEADER (menu checkbox ultra stable, sans JS) -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="../index.html" aria-label="Accueil">
@@ -85,20 +84,22 @@
         </div>
       </a>
 
-      <details class="nav-details">
-        <summary class="nav-toggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></summary>
-        <nav class="site-nav" aria-label="Navigation principale">
-          <a href="../index.html">Accueil</a>
-          <a href="../sport-automobile.html">Sport auto</a>
-          <a href="../sport-individuel.html">Sport individuel</a>
-          <a href="../disciplines-precision.html">Précision</a>
-          <a href="../presence-competition.html">Compétition</a>
-          <a href="../offres-tarifs.html">Offres</a>
-          <a href="index.html">Blog</a>
-          <a href="../faq.html">FAQ</a>
-          <a class="cta" href="https://app.lemcal.com/@pm-jb/30-minutes" rel="noopener">Appel GRATUIT</a>
-        </nav>
-      </details>
+      <input id="nav-check" class="nav-check" type="checkbox" aria-label="Ouvrir le menu" />
+      <label for="nav-check" class="nav-toggle" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="../index.html">Accueil</a>
+        <a href="../sport-automobile.html">Sport auto</a>
+        <a href="../sport-individuel.html">Sport individuel</a>
+        <a href="../disciplines-precision.html">Précision</a>
+        <a href="../presence-competition.html">Compétition</a>
+        <a href="../offres-tarifs.html">Offres</a>
+        <a href="index.html">Blog</a>
+        <a href="../faq.html">FAQ</a>
+        <a class="cta" href="https://app.lemcal.com/@pm-jb/30-minutes" rel="noopener">Appel GRATUIT</a>
+      </nav>
     </div>
   </header>
 
@@ -194,13 +195,13 @@
         <h2>Questions fréquentes</h2>
 
         <details open>
-          <summary>Pourquoi je suis vite en course mais irrégulier en qualif ?</summary>
-          <p>Parce que la qualif impose une fenêtre d’exécution courte : l’enjeu amplifie activation et sur-contrôle.</p>
+          <summary>Pourquoi je perds mon niveau en qualification alors que je suis vite en course ?</summary>
+          <p>Parce que la qualif exige une fenêtre d’exécution courte : pression, timing, trafic. Sans structure mentale, l’activation et le sur-contrôle perturbent l’exécution.</p>
         </details>
 
         <details>
           <summary>C’est quoi un “tour clair” ?</summary>
-          <p>Un tour où tu restes en mode exécution : attention stable, priorités nettes, récupération rapide après micro-erreur.</p>
+          <p>Un tour où tu restes en mode exécution : priorités simples, attention stable, décisions propres, et récupération rapide après micro-erreur.</p>
         </details>
 
         <details>
