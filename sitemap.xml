@@ -1,18 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://pm-jb.com/</loc></url>
-  <url><loc>https://pm-jb.com/sport-individuel.html</loc></url>
-  <url><loc>https://pm-jb.com/disciplines-precision.html</loc></url>
-  <url><loc>https://pm-jb.com/sport-automobile.html</loc></url>
-  <url><loc>https://pm-jb.com/presence-competition.html</loc></url>
-  <url><loc>https://pm-jb.com/offres-tarifs.html</loc></url>
-  <url><loc>https://pm-jb.com/faq.html</loc></url>
-  <url><loc>https://pm-jb.com/contact.html</loc></url>
-  <url><loc>https://pm-jb.com/mentions-legales.html</loc></url>
-  <url><loc>https://pm-jb.com/confidentialite.html</loc></url>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url><loc>https://pm-jb.com/blog/</loc></url>
-  <url><loc>https://pm-jb.com/blog/pression-competition-sport-individuel.html</loc></url>
-  <url><loc>https://pm-jb.com/blog/gestion-erreur-performance-sport.html</loc></url>
-  <url><loc>https://pm-jb.com/blog/preparation-mentale-sport-automobile-qualification.html</loc></url>
+  <!-- Pages principales -->
+  <url>
+    <loc>https://pm-jb.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://pm-jb.com/sport-individuel.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://pm-jb.com/disciplines-precision.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://pm-jb.com/sport-automobile.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://pm-jb.com/presence-competition.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://pm-jb.com/offres-tarifs.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pm-jb.com/faq.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://pm-jb.com/contact.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://pm-jb.com/mentions-legales.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://pm-jb.com/confidentialite.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://pm-jb.com/blog/index.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pm-jb.com/blog/preparateur-mental-presence-competition.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pm-jb.com/blog/briefing-mental-debrief-competition.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pm-jb.com/blog/pression-competition-sport-individuel.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://pm-jb.com/blog/gestion-erreur-performance-sport.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://pm-jb.com/blog/preparation-mentale-sport-automobile-qualification.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
