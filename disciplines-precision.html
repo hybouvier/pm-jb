@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Disciplines de précision | Préparation mentale | Jérémy Bouvier</title>
-  <meta name="description" content="Disciplines de précision : calme, focus utile, routine, gestion du doute et après-erreur. Stabiliser la précision sous pression." />
+  <title>Disciplines de précision | Focus • Calme • Exécution</title>
+  <meta name="description" content="Disciplines de précision (tir, ball-trap, etc.) : focus, calme, gestion du doute, après-erreur et exécution stable sous pression." />
   <link rel="canonical" href="https://pm-jb.com/disciplines-precision.html" />
   <meta name="theme-color" content="#070707" />
   <link rel="stylesheet" href="style.css" />
@@ -17,10 +17,8 @@
       <div class="links">
         <a href="tel:+33661962653">06 61 96 26 53</a>
         <a href="mailto:hybouvier@gmail.com">✉️ hybouvier@gmail.com</a>
-        <a class="icon-link" href="https://app.lemcal.com/@pm-jb/30-minutes" rel="noopener" aria-label="Réserver un appel" title="Réserver un appel">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1.5A2.5 2.5 0 0 1 22 6.5v13A2.5 2.5 0 0 1 19.5 22h-15A2.5 2.5 0 0 1 2 19.5v-13A2.5 2.5 0 0 1 4.5 4H6V3a1 1 0 0 1 1-1Zm12.5 6H4.5a.5.5 0 0 0-.5.5v11a.5.5 0 0 0 .5.5h15a.5.5 0 0 0 .5-.5v-11a.5.5 0 0 0-.5-.5ZM7 11h3v3H7v-3Zm4 0h3v3h-3v-3Zm4 0h3v3h-3v-3Z"/>
-          </svg>
+        <a class="icon-link" href="https://app.lemcal.com/@pm-jb/30-minutes" aria-label="Réserver un appel" title="Réserver un appel" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1.5A2.5 2.5 0 0 1 22 6.5v13A2.5 2.5 0 0 1 19.5 22h-15A2.5 2.5 0 0 1 2 19.5v-13A2.5 2.5 0 0 1 4.5 4H6V3a1 1 0 0 1 1-1Zm12.5 6H4.5a.5.5 0 0 0-.5.5v11a.5.5 0 0 0 .5.5h15a.5.5 0 0 0 .5-.5v-11a.5.5 0 0 0-.5-.5ZM7 11h3v3H7v-3Zm4 0h3v3h-3v-3Zm4 0h3v3h-3v-3Z"/></svg>
         </a>
       </div>
     </div>
@@ -28,7 +26,7 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-label="Accueil">
         <img src="assets/logo-hybou.png" alt="Logo HyBou" width="54" height="54" decoding="async" />
         <div class="brand-text">
           <div class="name">Jérémy BOUVIER</div>
@@ -36,42 +34,59 @@
         </div>
       </a>
 
-      <details class="nav-details">
-        <summary class="nav-toggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></summary>
-        <nav class="site-nav">
-          <a href="index.html">Accueil</a>
-          <a href="sport-automobile.html">Sport auto</a>
-          <a href="sport-individuel.html">Sport individuel</a>
-          <a href="disciplines-precision.html">Précision</a>
-          <a href="presence-competition.html">Compétition</a>
-          <a href="offres-tarifs.html">Offres</a>
-          <a href="blog/index.html">Blog</a>
-          <a href="faq.html">FAQ</a>
-          <a class="cta" href="https://app.lemcal.com/@pm-jb/30-minutes" rel="noopener">Appel GRATUIT</a>
-        </nav>
-      </details>
+      <input id="nav-check" class="nav-check" type="checkbox" aria-label="Ouvrir le menu" />
+      <label for="nav-check" class="nav-toggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></label>
+
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="sport-automobile.html">Sport auto</a>
+        <a href="sport-individuel.html">Sport individuel</a>
+        <a href="disciplines-precision.html">Précision</a>
+        <a href="presence-competition.html">Compétition</a>
+        <a href="offres-tarifs.html">Offres</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+        <a class="cta" href="https://app.lemcal.com/@pm-jb/30-minutes" rel="noopener">Appel GRATUIT</a>
+      </nav>
     </div>
   </header>
 
   <main>
     <section class="section">
-      <div class="container article">
-        <div class="breadcrumbs"><a href="index.html">Accueil</a><span>›</span><span>Disciplines de précision</span></div>
-        <h1>Disciplines de précision</h1>
-        <p class="lead">Quand tout se joue sur un geste fin : calme, focus utile, routine, après-erreur.</p>
+      <div class="container">
+        <div class="badge">Disciplines de précision</div>
+        <h1>Précision : exécuter sans bruit mental</h1>
+        <p class="lead">Quand tout se joue sur un geste propre, le mental doit être simple : focus, calme, rythme et après-erreur.</p>
 
-        <div class="grid-3">
-          <div class="card"><div class="badge">Focus utile</div><p class="lead">Réduire l’attention à 1–2 indices utiles.</p></div>
-          <div class="card"><div class="badge">Routine</div><p class="lead">Répéter la même séquence, au même rythme.</p></div>
-          <div class="card"><div class="badge">Après-erreur</div><p class="lead">Reset rapide : couper l’émotion, revenir au plan.</p></div>
+        <div class="grid-3" style="margin-top:14px">
+          <div class="card">
+            <h3>Focus</h3>
+            <p>Attention stable, filtre de l’utile, protection contre la dispersion.</p>
+          </div>
+          <div class="card">
+            <h3>Doute</h3>
+            <p>Réduire le sur-contrôle et retrouver des repères d’exécution.</p>
+          </div>
+          <div class="card">
+            <h3>Après-erreur</h3>
+            <p>Récupération rapide : tu ne “portes” pas l’erreur sur l’action suivante.</p>
+          </div>
         </div>
 
         <div class="card" style="margin-top:14px">
+          <h2>Approche</h2>
+          <ul class="list">
+            <li>Cadre d’exécution : priorités simples</li>
+            <li>Activation réglée : calme fonctionnel</li>
+            <li>Traitement erreur : court + efficace</li>
+            <li>Débrief utile : apprendre sans ruminer</li>
+          </ul>
           <div class="actions">
             <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes" rel="noopener">Appel stratégique gratuit</a>
             <a class="btn ghost" href="offres-tarifs.html">Voir les offres</a>
           </div>
         </div>
+
       </div>
     </section>
   </main>
