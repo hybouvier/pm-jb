@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog | Préparation mentale | Jérémy Bouvier</title>
-  <meta name="description" content="Blog préparation mentale : pression, focus, après-erreur, régularité, compétition." />
+  <title>Blog – Préparation mentale | Jérémy Bouvier</title>
+  <meta name="description" content="Articles de préparation mentale : pression en compétition, gestion de l’erreur, qualification en sport automobile." />
   <link rel="canonical" href="https://pm-jb.com/blog/" />
   <meta name="theme-color" content="#070707" />
   <link rel="stylesheet" href="../style.css" />
@@ -17,10 +17,8 @@
       <div class="links">
         <a href="tel:+33661962653">06 61 96 26 53</a>
         <a href="mailto:hybouvier@gmail.com">✉️ hybouvier@gmail.com</a>
-        <a class="icon-link" href="https://app.lemcal.com/@pm-jb/30-minutes" rel="noopener" aria-label="Réserver un appel" title="Réserver un appel">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1.5A2.5 2.5 0 0 1 22 6.5v13A2.5 2.5 0 0 1 19.5 22h-15A2.5 2.5 0 0 1 2 19.5v-13A2.5 2.5 0 0 1 4.5 4H6V3a1 1 0 0 1 1-1Zm12.5 6H4.5a.5.5 0 0 0-.5.5v11a.5.5 0 0 0 .5.5h15a.5.5 0 0 0 .5-.5v-11a.5.5 0 0 0-.5-.5ZM7 11h3v3H7v-3Zm4 0h3v3h-3v-3Zm4 0h3v3h-3v-3Z"/>
-          </svg>
+        <a class="icon-link" href="https://app.lemcal.com/@pm-jb/30-minutes" aria-label="Réserver un appel" title="Réserver un appel" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1.5A2.5 2.5 0 0 1 22 6.5v13A2.5 2.5 0 0 1 19.5 22h-15A2.5 2.5 0 0 1 2 19.5v-13A2.5 2.5 0 0 1 4.5 4H6V3a1 1 0 0 1 1-1Zm12.5 6H4.5a.5.5 0 0 0-.5.5v11a.5.5 0 0 0 .5.5h15a.5.5 0 0 0 .5-.5v-11a.5.5 0 0 0-.5-.5ZM7 11h3v3H7v-3Zm4 0h3v3h-3v-3Zm4 0h3v3h-3v-3Z"/></svg>
         </a>
       </div>
     </div>
@@ -28,7 +26,7 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="../index.html">
+      <a class="brand" href="../index.html" aria-label="Accueil">
         <img src="../assets/logo-hybou.png" alt="Logo HyBou" width="54" height="54" decoding="async" />
         <div class="brand-text">
           <div class="name">Jérémy BOUVIER</div>
@@ -36,37 +34,48 @@
         </div>
       </a>
 
-      <details class="nav-details">
-        <summary class="nav-toggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></summary>
-        <nav class="site-nav">
-          <a href="../index.html">Accueil</a>
-          <a href="../sport-automobile.html">Sport auto</a>
-          <a href="../sport-individuel.html">Sport individuel</a>
-          <a href="../disciplines-precision.html">Précision</a>
-          <a href="../presence-competition.html">Compétition</a>
-          <a href="../offres-tarifs.html">Offres</a>
-          <a href="index.html">Blog</a>
-          <a href="../faq.html">FAQ</a>
-          <a class="cta" href="https://app.lemcal.com/@pm-jb/30-minutes" rel="noopener">Appel GRATUIT</a>
-        </nav>
-      </details>
+      <input id="nav-check" class="nav-check" type="checkbox" aria-label="Ouvrir le menu" />
+      <label for="nav-check" class="nav-toggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></label>
+
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="../index.html">Accueil</a>
+        <a href="../sport-automobile.html">Sport auto</a>
+        <a href="../sport-individuel.html">Sport individuel</a>
+        <a href="../disciplines-precision.html">Précision</a>
+        <a href="../presence-competition.html">Compétition</a>
+        <a href="../offres-tarifs.html">Offres</a>
+        <a href="index.html">Blog</a>
+        <a href="../faq.html">FAQ</a>
+        <a class="cta" href="https://app.lemcal.com/@pm-jb/30-minutes" rel="noopener">Appel GRATUIT</a>
+      </nav>
     </div>
   </header>
 
   <main>
     <section class="section">
-      <div class="container article">
-        <h1>Blog</h1>
-        <p class="lead">Articles concrets : pression, focus, après-erreur, régularité, compétition.</p>
+      <div class="container">
+        <div class="badge">Blog</div>
+        <h1>Articles</h1>
+        <p class="lead">Approche pro : pression, après-erreur, régularité, qualification. Sans divulguer de routines “copiables”.</p>
 
         <div class="related-grid" style="margin-top:14px">
-          <a class="card" href="gestion-erreur-performance-sport.html" style="text-decoration:none">
-            <div class="badge">Régularité</div>
-            <h3 style="margin-top:10px">Gestion de l’erreur : le facteur caché</h3>
-            <p class="small">Ce n’est pas l’erreur qui détruit la performance, c’est ce qui se passe après.</p>
-            <div class="actions"><span class="btn primary">Lire</span></div>
-          </a>
+          <div class="card">
+            <h3>Pression en compétition</h3>
+            <p class="small">Pourquoi ton niveau chute quand l’enjeu monte (sport individuel).</p>
+            <a class="btn primary" href="pression-competition-sport-individuel.html">Lire</a>
+          </div>
+          <div class="card">
+            <h3>Gestion de l’erreur</h3>
+            <p class="small">Le facteur caché de la performance durable.</p>
+            <a class="btn primary" href="gestion-erreur-performance-sport.html">Lire</a>
+          </div>
+          <div class="card">
+            <h3>Qualification sport automobile</h3>
+            <p class="small">Structurer un tour clair sous pression.</p>
+            <a class="btn primary" href="preparation-mentale-sport-automobile-qualification.html">Lire</a>
+          </div>
         </div>
+
       </div>
     </section>
   </main>
