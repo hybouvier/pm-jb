@@ -64,39 +64,9 @@
 
   <!-- Blog -->
   <url>
-    <loc>https://pm-jb.com/blog/index</loc>
+    <loc>https://pm-jb.com/blog/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://pm-jb.com/blog/preparateur-mental-presence-competition</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://pm-jb.com/blog/briefing-mental-debrief-competition</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://pm-jb.com/blog/pression-competition-sport-individuel</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://pm-jb.com/blog/gestion-erreur-performance-sport</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://pm-jb.com/blog/preparation-mentale-sport-automobile-qualification</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 
 </urlset>
