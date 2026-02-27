@@ -3,12 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>FAQ | Préparation mentale – Jérémy Bouvier</title>
   <meta name="description" content="FAQ préparation mentale : appel gratuit, profils sélectionnés, déroulé, visio/présentiel, briefings/débriefings." />
+
+  <!-- Canonical (SANS extension) -->
   <link rel="canonical" href="https://pm-jb.com/faq" />
+
   <meta name="theme-color" content="#070707" />
+
+  <!-- Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="FAQ | Préparation mentale – Jérémy Bouvier" />
+  <meta property="og:description" content="Appel gratuit, profils sélectionnés, visio/présentiel, routines, briefings/débriefings." />
+  <meta property="og:url" content="https://pm-jb.com/faq" />
+  <meta name="twitter:card" content="summary" />
+
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Données structurées (SEO, sans impact design) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebPage",
+        "@id":"https://pm-jb.com/faq#webpage",
+        "url":"https://pm-jb.com/faq",
+        "name":"FAQ | Préparation mentale – Jérémy Bouvier",
+        "inLanguage":"fr"
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://pm-jb.com/faq#breadcrumbs",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Accueil","item":"https://pm-jb.com/"},
+          {"@type":"ListItem","position":2,"name":"FAQ","item":"https://pm-jb.com/faq"}
+        ]
+      },
+      {
+        "@type":"Person",
+        "@id":"https://pm-jb.com/#person",
+        "name":"Jérémy Bouvier",
+        "jobTitle":"Préparateur mental",
+        "url":"https://pm-jb.com/"
+      }
+    ]
+  }
+  </script>
 </head>
+
 <body>
 
   <div class="topbar">
@@ -26,7 +70,7 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Accueil">
+      <a class="brand" href="/" aria-label="Accueil">
         <img src="assets/logo-hybou.png" alt="Logo HyBou" width="54" height="54" decoding="async" />
         <div class="brand-text">
           <div class="name">Jérémy BOUVIER</div>
@@ -38,14 +82,14 @@
       <label for="nav-check" class="nav-toggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></label>
 
       <nav class="site-nav" aria-label="Navigation principale">
-        <a href="index.html">Accueil</a>
-        <a href="sport-automobile.html">Sport auto</a>
-        <a href="sport-individuel.html">Sport individuel</a>
-        <a href="disciplines-precision.html">Précision</a>
-        <a href="presence-competition.html">Compétition</a>
-        <a href="offres-tarifs.html">Offres</a>
-        <a href="blog/index.html">Blog</a>
-        <a href="faq.html">FAQ</a>
+        <a href="/">Accueil</a>
+        <a href="/sport-automobile">Sport auto</a>
+        <a href="/sport-individuel">Sport individuel</a>
+        <a href="/disciplines-precision">Précision</a>
+        <a href="/presence-competition">Compétition</a>
+        <a href="/offres-tarifs">Offres</a>
+        <a href="/blog/">Blog</a>
+        <a href="/faq">FAQ</a>
         <a class="cta" href="https://app.lemcal.com/@pm-jb/30-minutes" rel="noopener">Appel GRATUIT</a>
       </nav>
     </div>
@@ -87,9 +131,44 @@
           <p class="lead">30 minutes, sans engagement, pour clarifier ta situation et décider proprement.</p>
           <div class="actions">
             <a class="btn primary" href="https://app.lemcal.com/@pm-jb/30-minutes" rel="noopener">Réserver l’appel gratuit</a>
-            <a class="btn ghost" href="contact.html">Contact</a>
+            <a class="btn ghost" href="/contact">Contact</a>
           </div>
         </div>
+
+        <!-- FAQ Schema (SEO) -->
+        <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"FAQPage",
+          "mainEntity":[
+            {
+              "@type":"Question",
+              "name":"Est-ce que l’appel stratégique est vraiment gratuit ?",
+              "acceptedAnswer":{"@type":"Answer","text":"Oui. 30 minutes pour analyser ta situation et déterminer si un accompagnement est pertinent. Si ce n’est pas le bon moment, je te le dis clairement."}
+            },
+            {
+              "@type":"Question",
+              "name":"Quels profils tu sélectionnes ?",
+              "acceptedAnswer":{"@type":"Answer","text":"Profils engagés, saison importante, objectif qualification/podium, et surtout capacité à appliquer un cadre. Je ne vends pas de motivation : je structure l’exécution."}
+            },
+            {
+              "@type":"Question",
+              "name":"Présentiel ou visio : qu’est-ce qui marche le mieux ?",
+              "acceptedAnswer":{"@type":"Answer","text":"Les deux fonctionnent. On choisit selon ton contexte. L’important : structure + application (entraînement / compétition)."}
+            },
+            {
+              "@type":"Question",
+              "name":"Tu donnes des routines toutes faites ?",
+              "acceptedAnswer":{"@type":"Answer","text":"Non. Je structure un cadre adapté à ton sport, ton niveau et ton échéance. Objectif : reproductibilité sous enjeu."}
+            },
+            {
+              "@type":"Question",
+              "name":"Les briefings / débriefings : c’est comment ?",
+              "acceptedAnswer":{"@type":"Answer","text":"Format visio, vocal ou écrit structuré. L’objectif : arriver avec un plan clair avant, et ajuster immédiatement après."}
+            }
+          ]
+        }
+        </script>
 
       </div>
     </section>
@@ -100,8 +179,8 @@
       <div class="title">Jérémy BOUVIER – Préparateur Mental</div>
       <div class="small">06 61 96 26 53 • <a href="mailto:hybouvier@gmail.com">hybouvier@gmail.com</a></div>
       <div class="links-row small">
-        <a href="mentions-legales.html">Mentions légales</a> |
-        <a href="confidentialite.html">Politique de confidentialité</a>
+        <a href="/mentions-legales">Mentions légales</a> |
+        <a href="/confidentialite">Politique de confidentialité</a>
       </div>
     </div>
   </footer>
