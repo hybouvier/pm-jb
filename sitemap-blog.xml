@@ -3,7 +3,7 @@
 
   <url>
     <loc>https://pm-jb.com/blog/</loc>
-    <lastmod>2026-03-01</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -34,6 +34,14 @@
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- NOUVEAU : Qualification -->
+  <url>
+    <loc>https://pm-jb.com/blog/preparation-mentale-sport-automobile-qualification</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
 </urlset>
